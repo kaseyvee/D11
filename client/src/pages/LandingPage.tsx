@@ -1,11 +1,9 @@
-interface IProps {
+import React from "react";
 
-}
-
-const LandingPage: React.FC<IProps> = (props) => {
+const LandingPage: React.FC = () => {
   return (
     <div>
-      Landing Page
+      <h1>test</h1>
     </div>
   );
 }
