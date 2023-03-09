@@ -1,0 +1,55 @@
+$main-button-example-height: 42px;
+$main-button-example-border: 1px solid;
+
+.main-button-example {
+    // main styles idk change these its just yolo
+    // font-family: "MyGoogleFontName", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: $main-button-example-height;
+    cursor: pointer;
+
+    // add styles if there is a picture on the button too, maybe custom styles for dictating left-icon vs right-icon
+    // svg {}
+
+    // if wanting transition effects
+    &:active,
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    // if the button has the same style but only needs color changes
+    &_color {
+        &_yellow {
+            color: $yellow;
+            background-color: $white;
+
+            &:hover {
+                color: $yellow;
+                background-color: $black;
+            }
+        }
+
+        &_white {
+            color: $white;
+            background-color: $black;
+
+            &:hover {
+                color: $yellow;
+                background-color: $black;
+            }
+        }
+
+        &_black {
+            color: $white;
+            background-color: $black;
+
+            &:hover {
+                color: $yellow;
+                background-color: $white;
+            }
+        }
+    }
+}
