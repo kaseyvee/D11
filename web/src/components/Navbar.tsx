@@ -9,6 +9,7 @@ const NavBar: React.FC = () => {
   return (
     <div className="navbar">
       <h1>DISTRICTELEVEN</h1>
+      <div>insert svg logo here</div>
       <div className="navbar-items">
         <Link to='/'>HOME</Link>
         <Link to='/menu'>MENU</Link>
