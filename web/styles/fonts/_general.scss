@@ -1,0 +1,12 @@
+p {
+    @extend .my-google-font-name;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  label {
+    @extend .my-google-font-name;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  
