@@ -27,3 +27,5 @@ dist-ssr
 .env
 web/node_modules
 web/package-lock.json
+backend/node_modules
+backend/package-lock.json

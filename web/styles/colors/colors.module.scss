@@ -1,0 +1,31 @@
+// Adding a new color...
+// 1. Add to the "Standard Color Declarations"
+// 2. Add to the theme-colors map
+// 3. Add to the :export statement
+// 4. Add to the interface in colors.ts
+
+/* Standard Color Declarations */
+$yellow: #D3AF37;
+$white: #FFFCF5;
+$black: #1E1E1E;
+
+/* gradients */
+$myGradientName: linear-gradient(90deg, #FFFFFF 0.5%, #A1A1A1 99.5%);
+
+/* theme-colors map, remnant of Bootstrap approach, still used for our checkboxes */
+$theme-colors: (
+        "yellow": $yellow,
+        "white": $white,
+        "black": $black,
+        
+        "myGradientName": $myGradientName,
+);
+
+/* Export for Typescript / React JSX implementation */
+:export {
+    yellow: $yellow;
+    white: $white;
+    black: $black;
+
+    myGradientName: $myGradientName;
+}
