@@ -1,9 +1,10 @@
 import React from "react";
+import NavBar from "../components/Navbar";
 
 const LandingPage: React.FC = () => {
   return (
     <div>
-      <h1>test</h1>
+      <NavBar />
     </div>
   );
 }
