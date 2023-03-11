@@ -4,6 +4,7 @@ import LandingPage from "./pages/LandingPage";
 import MenuPage from "./pages/MenuPage";
 import SamplePage2 from "./pages/SamplePage2";
 
+import "./styles/index.scss";
 
 const App: React.FC = () => {
 
