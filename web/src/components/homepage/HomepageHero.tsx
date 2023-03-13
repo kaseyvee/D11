@@ -1,6 +1,15 @@
 const HomepageHero: React.FC = () => {
   return (
-    <section className="landing">
+    <section className="home-hero">
+
+
+      <div className="home-hero_background">
+        <img 
+          className="home-hero_background_image"
+          alt="d11-food"
+          src="background.jpg"
+        />
+      </div>
       <div>
         <div>late night yumyuymyumn</div>
 

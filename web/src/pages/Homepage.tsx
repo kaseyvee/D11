@@ -9,8 +9,8 @@ const Homepage: React.FC = () => {
     // splitting the pages here because our Homepage route ("/") will load these and this page component will be handling the scroll effects (makes it easier for us)
     <div className="homepage">
       <HomepageHero/>
-      <HomepagePartners/>
-      <HomepageStory/>
+      {/* <HomepagePartners/> */}
+      {/* <HomepageStory/> */}
     </div>
   );
 }
