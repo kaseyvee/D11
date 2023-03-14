@@ -3,10 +3,15 @@ import HomepagePartners from "../components/homepage/HomepagePartners";
 import HomepageStory from "../components/homepage/HomepageStory";
 
 const Homepage: React.FC = () => {
-  return (
-    // first div always name of component unless nested (see SASS)
+   /**
+     * when querying contentful the most recent release is at index 0 so everything will automatically be pushed down
+      https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/search-parameters/content-type/query-entries/console  
+    */
 
-    // splitting the pages here because our Homepage route ("/") will load these and this page component will be handling the scroll effects (makes it easier for us)
+  
+  return (
+
+      
     <div className="homepage">
       <HomepageHero/>
       {/* <HomepagePartners/> */}
