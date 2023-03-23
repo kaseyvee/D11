@@ -1,6 +1,7 @@
 import * as contentful from 'contentful';
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import NavBar from './components/Navbar';
 import Homepage from "./pages/Homepage";
 
 
@@ -24,7 +25,7 @@ const App: React.FC = () => {
             {/* <Route path="/menu" element={<MenuPage/>}/> */}
           </Routes>
 
-          {/* <NavBar/> */}
+          <NavBar />
           {/* <Footer/> */}
       </BrowserRouter>
   );

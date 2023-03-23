@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import HeroButton from "./buttons/HeroButton";
 
 const NavBar: React.FC = () => {
 
@@ -9,13 +10,33 @@ const NavBar: React.FC = () => {
   return (
     <div className="navbar">
       <h1>DISTRICTELEVEN</h1>
-      <div className="logo">insert svg logo here</div>
+      <img src="src/assets/logo.svg" alt="district eleven logo"/>
       <div className="navbar-items">
-        <Link to='/'>HOME</Link>
-        <Link to='/menu'>MENU</Link>
-        <Link to={uberEatsLink}>UBEREATS</Link>
-        <Link to={reservationsLink}>RESERVATIONS</Link>
-        <Link to="/">CONTACT US</Link>
+        <HeroButton
+          to="/"
+          color="white"
+          children="HOME"
+        />
+        <HeroButton
+          to="/menu"
+          color="white"
+          children="MENU"
+        />
+        <HeroButton
+          to={uberEatsLink}
+          color="white"
+          children="UBEREATS"
+        />
+        <HeroButton
+          to={reservationsLink}
+          color="white"
+          children="RESERVATIONS"
+        />
+        <HeroButton
+          to="/"
+          color="white"
+          children="CONTACT US"
+        />
       </div>
     </div>
   );
