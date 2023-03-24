@@ -1,13 +1,14 @@
 $main-button-example-height: 42px;
 $main-button-example-border: 1px solid;
 
-.main-button-example {
+.button {
     // main styles idk change these its just yolo
-    // font-family: "MyGoogleFontName", sans-serif;
+    @include my-google-font-name(400);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: $main-button-example-height;
+    text-decoration: none;
     cursor: pointer;
 
     // add styles if there is a picture on the button too, maybe custom styles for dictating left-icon vs right-icon

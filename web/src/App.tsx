@@ -24,7 +24,7 @@ const App: React.FC = () => {
             {/* <Route path="/menu" element={<MenuPage/>}/> */}
           </Routes>
 
-          {/* <NavBar/> */}
+          {/* <NavBar /> */}
           {/* <Footer/> */}
       </BrowserRouter>
   );
