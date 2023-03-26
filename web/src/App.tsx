@@ -2,7 +2,7 @@ import * as contentful from 'contentful';
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
-import NavBar from './components/Navbar';
+import NavBar from './components/navbar';
 
 
 const App: React.FC = () => {

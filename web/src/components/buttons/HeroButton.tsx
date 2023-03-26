@@ -39,7 +39,8 @@ function HeroButton<T extends HeroButtonType>(props: IProps<T>): JSX.Element {
 	const content: ReactNode = (
 		<React.Fragment>
                 {/* we can use span here to add font-styles to our buttons */}
-				<span className={props.className}>{props.children}</span>
+				{/* <span className={props.className}>{props.children}</span> */}
+				<span>{props.children}</span>
 		</React.Fragment>
 	);
 

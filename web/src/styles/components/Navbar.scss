@@ -1,7 +1,37 @@
 .navbar {
+  // border: aqua 1px solid;
   position: fixed;
   top: 0;
   width: 100%;
+
+  &_main {
+    
+    &_header {
+      color: $white;
+      display: none;
+      letter-spacing: 10px;
+      font-size: 32px;
+      margin-top: 2rem;
+
+      &_district {
+        @include montserrat(700);
+
+      }
+      &_eleven {
+        @include montserrat(500);
+      }
+    }
+
+    &_menu-open {
+      margin: 2rem;
+      cursor: pointer;
+    }
+
+    .nav-items {
+      display: none;
+    }
+
+  }
   
   &_overlay {
     display: none !important;
@@ -38,7 +68,31 @@
 
 @media (min-width: 769px) {
   .navbar {
+    
+    &_main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
+
+      &_header {
+        display: block !important;
+      }
+
+      &_menu-open {
+        display: none !important;
+      }
+
+      .nav-items {
+        display: flex !important;
+        
+        .nav-button {
+          margin: 1rem;
+        }
+      }
+    }
+    
     &_overlay {
       display: none;
     }
