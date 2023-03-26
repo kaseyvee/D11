@@ -1,12 +1,35 @@
 p {
-    @extend .my-google-font-name;
-    font-size: 16px;
-    line-height: 26px;
+    @extend .montserrat;
+    margin: 0;
   }
   
   label {
-    @extend .my-google-font-name;
-    font-size: 18px;
-    line-height: 30px;
+    @extend .montserrat;
+    margin: 0;
   }
+
+  span {
+    margin: 0;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  h4 {
+    margin: 0;
+  }
+
+  h5 {
+    margin: 0;
+  }
+  
   

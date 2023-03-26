@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,100;1,400&display=swap');
 
 // create standard variable default with defautl weight
-@mixin my-google-font-name($font-weight: 400) {
+@mixin montserrat($font-weight: 400) {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: $font-weight !important;
 }
 
-.my-google-font-name {
-    @include my-google-font-name;
+.montserrat {
+    @include montserrat;
 }
 
-.my-google-font-name_thin {
-    @include my-google-font-name(100);
+.montserrat_thin {
+    @include montserrat(100);
 }
 
-.my-google-font-name_medium {
-    @include my-google-font-name(500);
+.montserrat_medium {
+    @include montserrat(500);
 }
 
-.my-google-font-name_bold {
-    @include my-google-font-name(700);
+.montserrat_bold {
+    @include montserrat(700);
 }
