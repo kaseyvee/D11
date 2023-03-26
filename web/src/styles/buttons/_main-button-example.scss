@@ -3,7 +3,7 @@ $main-button-example-border: 1px solid;
 
 .button {
     // main styles idk change these its just yolo
-    @include my-google-font-name(400);
+    @include montserrat(400);
     display: flex;
     justify-content: center;
     align-items: center;
