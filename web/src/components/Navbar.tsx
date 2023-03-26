@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import HeroButton from "./buttons/HeroButton";
 
 const NavBar: React.FC = () => {
@@ -9,34 +8,50 @@ const NavBar: React.FC = () => {
 
   return (
     <div className="navbar">
-      <h1>DISTRICTELEVEN</h1>
-      <img src="src/assets/logo.svg" alt="district eleven logo"/>
-      <div className="navbar-items">
-        <HeroButton
-          to="/"
-          color="white"
-          children="HOME"
+      <h1 className="navbar_header">DISTRICTELEVEN</h1>
+      <div className="navbar_overlay">
+        <img
+          src="src/assets/menu-close-button.svg"
+          alt="exit menu"
+          className="navbar_overlay_menu-close"
         />
-        <HeroButton
-          to="/menu"
-          color="white"
-          children="MENU"
-        />
-        <HeroButton
-          to={uberEatsLink}
-          color="white"
-          children="UBEREATS"
-        />
-        <HeroButton
-          to={reservationsLink}
-          color="white"
-          children="RESERVATIONS"
-        />
-        <HeroButton
-          to="/"
-          color="white"
-          children="CONTACT US"
-        />
+        <div className="navbar_overlay_items">
+          <img
+            src="src/assets/logo.svg"
+            alt="district eleven logo"
+            className="navbar_overlay_items_logo"
+          />
+          <HeroButton
+            to="/"
+            color="white"
+            children="HOME"
+            className="nav-button"
+          />
+          <HeroButton
+            to="/menu"
+            color="white"
+            children="MENU"
+            className="nav-button"
+          />
+          <HeroButton
+            to={uberEatsLink}
+            color="white"
+            children="UBEREATS"
+            className="nav-button"
+          />
+          <HeroButton
+            to={reservationsLink}
+            color="white"
+            children="RESERVATIONS"
+            className="nav-button"
+          />
+          <HeroButton
+            to="/"
+            color="white"
+            children="CONTACT US"
+            className="nav-button"
+          />
+        </div>
       </div>
     </div>
   );
