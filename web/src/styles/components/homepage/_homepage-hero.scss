@@ -1,16 +1,57 @@
-.home-hero {
-
+.homepage-hero {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    
     &_background {
-        position: absolute;
         z-index: -1;
-        max-height: 100%;
-        max-width: 100%;
-        &_image {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &_img {
             height: 100%;
             width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &_content {
+        border: 3px solid yellowgreen;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        &_words {
+            border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+
+            &_header {
+                // TODO add real font stuff (import)
+                color: white;
+                font-size: 64px;
+                font-weight: 700;
+                margin: 0;
+            }
+    
+            &_greeting {
+                // TODO add real font stuff (import)
+                font-size: 64px;
+                color: #FFFCF5;
+                font-style: italic;
+                font-weight: 100;
+                margin: 0;
+            }
+        }
+
+        
+
+        &_buttons {
+            display: flex;
+            gap: 25px;
         }
     }
 }

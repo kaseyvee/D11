@@ -7,10 +7,7 @@ const Homepage: React.FC = () => {
   return (
       
     <div className="homepage">
-      
-      <section className="homepage-section hero-section"><h1>hi</h1></section>
-      <section className="homepage-section partners-section"><HomepageHero/></section>
-      <section className="homepage-section story-section"><HomepageHero/></section>
+      <HomepageHero/>
     </div>
   );
 }
