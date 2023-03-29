@@ -1,8 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroButton from "../buttons/HeroButton";
 import NavItems from "./NavItems";
 
 const NavBar: React.FC = () => {
+  
+  const scrollUpStyle = {
+    animation: "scrollUp 500ms ease-in-out forwards"
+  };
+  const scrollDownStyle = {
+    animation: "scrollDown 500ms ease-in-out forwards"
+  };
+
+  const [scrollStyle, setScrollStyle] = useState(scrollDownStyle);
+
+  document.addEventListener("scroll", handleScrollEffect)
+
+  function handleScrollEffect() {
+    const position = window.scrollY;
+    if (position > 500) {
+      return setScrollStyle(scrollUpStyle);
+    }
+
+    else if (position <= 500) {
+      return setScrollStyle(scrollDownStyle)
+    }
+  }
 
   const uberEatsLink = "https://www.ubereats.com/ca/store/district-eleven/LoDFiZK3WDayE9TBfCqlDQ?diningMode=DELIVERY";
   const reservationsLink = "https://www.exploretock.com/district-eleven-vancouver?tock_source=tock&tock_medium=city_page&tock_content=carousel-District%20Eleven";
@@ -11,7 +33,7 @@ const NavBar: React.FC = () => {
     <div className="navbar">
 
       <div className="navbar_main">
-        <div className="navbar_main_header">
+        <div className="navbar_main_header" style={scrollStyle}>
           <span className="navbar_main_header_district">DISTRICT</span>
           <span className="navbar_main_header_eleven">ELEVEN</span>
         </div>
@@ -22,7 +44,7 @@ const NavBar: React.FC = () => {
           className="navbar_main_menu-open"
         />
         
-        <NavItems />
+        <NavItems style={scrollStyle} />
       </div>
 
       <div className="navbar_overlay">

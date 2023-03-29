@@ -12,15 +12,35 @@
       letter-spacing: 10px;
       font-size: 32px;
       margin-top: 2rem;
+      // animation: scrollUp 1s ease-out forwards;
 
+      @keyframes scrollUp {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-4rem)
+        }
+      }
+
+      @keyframes scrollDown {
+        0% {
+          transform: translateY(-4rem);
+        }
+        100% {
+          transform: translateY(0)
+        }
+      }
+      
       &_district {
         @include montserrat(700);
-
+        
       }
       &_eleven {
         @include montserrat(500);
       }
     }
+
 
     &_menu-open {
       margin: 2rem;
@@ -29,6 +49,7 @@
 
     .nav-items {
       display: none;
+      // animation: scrollUp 1s ease-out forwards;
     }
 
   }
