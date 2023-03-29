@@ -8,6 +8,8 @@ const Homepage: React.FC = () => {
       
     <div className="homepage">
       <HomepageHero/>
+      <HomepagePartners/>
+      <HomepageStory/>
     </div>
   );
 }

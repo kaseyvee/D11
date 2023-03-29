@@ -1,7 +1,7 @@
 @import "colors/colors.module.scss";
 @import "fonts";
-@import "components";
 @import "buttons";
+@import "components";
 @import "helper";
 @import "pages";
 
@@ -13,7 +13,7 @@ html {
     body {
         margin: 0;
         height: 100%;
-        overflow-y: hidden;
+        // overflow-y: hidden;
         #root {
             height: 100%;
         }
