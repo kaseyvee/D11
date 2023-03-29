@@ -1,0 +1,8 @@
+.footer-button {
+  background: transparent !important;
+  min-height: fit-content;
+
+  &:hover {
+    color: $white;
+  }
+}

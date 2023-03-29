@@ -1,0 +1,78 @@
+.footer {
+  background: $black;
+  @include montserrat;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  &_top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+    &_info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3rem;
+
+      &_item {
+        
+        &_header {
+          @include montserrat(500);
+          color: $yellow;
+          margin-bottom: 1rem;
+        }
+
+        &_content {
+          color: $white;
+        }
+      }
+    }
+
+    &_map {
+      max-width: 30rem;
+
+    }
+  }
+
+  &_bottom {
+    display: flex;
+    color: $yellow;
+    font-size: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    &_logo {
+      mix-blend-mode: lighten;
+    }
+
+    &_socials {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+}
+
+@media (min-width: 577px) {
+  .footer {
+    &_bottom {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+}
+
+@media (min-width: 993px) {
+  .footer {
+    padding: 2rem 8rem;
+    &_top {
+      flex-direction: row;
+    }
+  }
+}
