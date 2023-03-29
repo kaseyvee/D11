@@ -10,7 +10,7 @@ $white: #FFFCF5;
 $black: #1E1E1E;
 
 /* gradients */
-$myGradientName: linear-gradient(90deg, #FFFFFF 0.5%, #A1A1A1 99.5%);
+$blackFade: linear-gradient(180deg, #1e1e1e93 0.1%, #1e1e1e00 99.9%);
 
 /* theme-colors map, remnant of Bootstrap approach, still used for our checkboxes */
 $theme-colors: (
@@ -18,7 +18,7 @@ $theme-colors: (
         "white": $white,
         "black": $black,
         
-        "myGradientName": $myGradientName,
+        "blackFade": $blackFade,
 );
 
 /* Export for Typescript / React JSX implementation */
@@ -27,5 +27,5 @@ $theme-colors: (
     white: $white;
     black: $black;
 
-    myGradientName: $myGradientName;
+    blackFade: $blackFade;
 }

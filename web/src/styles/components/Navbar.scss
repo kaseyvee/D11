@@ -4,7 +4,17 @@
   top: 0;
   width: 100%;
 
+  &_menu-open, &_menu-close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 2rem;
+    z-index: 1;
+    cursor: pointer;
+  }
+
   &_main {
+    background: $blackFade;
     
     &_header {
       color: $white;
@@ -12,25 +22,6 @@
       letter-spacing: 10px;
       font-size: 32px;
       margin-top: 2rem;
-      // animation: scrollUp 1s ease-out forwards;
-
-      @keyframes scrollUp {
-        0% {
-          transform: translateY(0);
-        }
-        100% {
-          transform: translateY(-4rem)
-        }
-      }
-
-      @keyframes scrollDown {
-        0% {
-          transform: translateY(-4rem);
-        }
-        100% {
-          transform: translateY(0)
-        }
-      }
       
       &_district {
         @include montserrat(700);
@@ -41,21 +32,12 @@
       }
     }
 
-
-    &_menu-open {
-      margin: 2rem;
-      cursor: pointer;
-    }
-
     .nav-items {
       display: none;
-      // animation: scrollUp 1s ease-out forwards;
     }
-
   }
   
   &_overlay {
-    display: none !important;
     position: absolute;
     top: 0;
     width: 100%;
@@ -64,14 +46,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    &_menu-close {
-      position: absolute;
-      top: 0;
-      left: 0;
-      margin: 2rem;
-      cursor: pointer;
-    }
 
     &_items {
       display: flex;
@@ -89,20 +63,18 @@
 
 @media (min-width: 769px) {
   .navbar {
-    
+    &_menu-open, &_menu-close {
+      display: none !important;
+    }
+
     &_main {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
 
-
       &_header {
         display: block !important;
-      }
-
-      &_menu-open {
-        display: none !important;
       }
 
       .nav-items {
@@ -113,9 +85,23 @@
         }
       }
     }
-    
-    &_overlay {
-      display: none;
-    }
+  }
+}
+
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-4rem)
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(-4rem);
+  }
+  100% {
+    transform: translateY(0)
   }
 }
