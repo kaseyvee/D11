@@ -1,5 +1,10 @@
 .homepage {
   border: 1px solid green;
-  height: 100%;
+  // height: 100%;
+
+  &-hero, &-partners, &-story {
+    background-color: green;
+    height: 100vh;
+  }
 }
 

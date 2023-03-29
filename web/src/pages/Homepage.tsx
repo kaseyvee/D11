@@ -8,7 +8,8 @@ const Homepage: React.FC = () => {
       
     <div className="homepage">
       <HomepageHero/>
-      {/* <HomepagePartners/> */}
+      <HomepagePartners/>
+      <HomepageStory/>
     </div>
   );
 }

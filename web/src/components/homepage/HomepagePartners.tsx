@@ -1,13 +1,13 @@
 const HomepagePartners: React.FC = () => {
   return (
-    <section className="blurb">
-      <div className="blurb-left">
+    <section className="homepage-partners">
+      <div className="homepage-partners-left">
         <p>As seen in:</p>
 
         <div>insert blog svgs here</div>
       </div>
 
-      <div className="blurb-right">
+      <div className="homepage-partners-right">
         <p>
           <strong>Modern</strong> takes on Vietnamese classics.
         </p>

@@ -1,6 +1,6 @@
 const HomepageStory: React.FC = () => {
   return (
-    <section className="about">
+    <section className="homepage-story">
       <p>
         From the ashes of New Westminster’s Pho Pho You restaurant comes{" "}
         <span>
