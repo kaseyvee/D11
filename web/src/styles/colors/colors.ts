@@ -4,8 +4,9 @@ interface ICSSColors {
 	yellow: string;
 	black: string;
 	white: string;
+	transparentBlack: string;
 
-    myGradientName: string;
+	blackFade: string;
 }
 
 export default colors as unknown as ICSSColors;

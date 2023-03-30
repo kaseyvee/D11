@@ -1,3 +1,4 @@
+import externalLinks from "../../helpers/externalLinks";
 import HeroButton from "../buttons/HeroButton";
 
 const HomepageHero: React.FC = () => {
@@ -21,8 +22,16 @@ const HomepageHero: React.FC = () => {
         </div>
 
         <div className="homepage-hero_content_buttons">
-          <HeroButton>MENU</HeroButton>
-          <HeroButton>BOOK A TABLE</HeroButton>
+          <HeroButton
+            to="/menu"
+            color="white"
+            children="MENU"
+          />
+          <HeroButton
+            to={externalLinks.reservations}
+            color="white"
+            children="BOOK A TABLE"
+          />
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 $main-button-example-height: 42px;
-$main-button-example-border: 1px solid $white;
+$main-button-example-border: 1px solid;
 
 .button {
     // main styles idk change these its just yolo
@@ -10,8 +10,6 @@ $main-button-example-border: 1px solid $white;
     min-height: $main-button-example-height;
     padding: 0 1rem;
     text-decoration: none;
-    background: #0000001a;
-    color: $white;
     border: $main-button-example-border;
     border-radius: 50px;
     cursor: pointer;
@@ -40,11 +38,11 @@ $main-button-example-border: 1px solid $white;
 
         &_white {
             color: $white;
-            background-color: $black;
+            background-color: $transparentBlack;
 
             &:hover {
                 color: $yellow;
-                background-color: $black;
+                // background-color: $black;
             }
         }
 
