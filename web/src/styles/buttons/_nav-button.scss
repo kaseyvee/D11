@@ -1,3 +1,9 @@
 .nav-button {
   background: transparent !important;
 }
+
+@media (min-width: 769px) {
+  .nav-button {
+    margin: 1rem;
+  }
+}
