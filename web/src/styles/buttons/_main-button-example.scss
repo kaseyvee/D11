@@ -3,12 +3,15 @@ $main-button-example-border: 1px solid;
 
 .button {
     // main styles idk change these its just yolo
-    @include montserrat(500);
+    @include montserrat(700);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: $main-button-example-height;
+    padding: 0 1rem;
     text-decoration: none;
+    border: $main-button-example-border;
+    border-radius: 50px;
     cursor: pointer;
 
     // add styles if there is a picture on the button too, maybe custom styles for dictating left-icon vs right-icon
@@ -35,11 +38,11 @@ $main-button-example-border: 1px solid;
 
         &_white {
             color: $white;
-            background-color: $black;
+            background-color: $transparentBlack;
 
             &:hover {
                 color: $yellow;
-                background-color: $black;
+                // background-color: $black;
             }
         }
 

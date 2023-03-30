@@ -1,5 +1,7 @@
 .footer-button {
+  @include montserrat(500);
   background: transparent !important;
+  border: none;
   min-height: fit-content;
 
   &:hover {

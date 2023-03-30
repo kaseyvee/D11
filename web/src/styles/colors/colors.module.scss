@@ -8,6 +8,7 @@
 $yellow: #D3AF37;
 $white: #FFFCF5;
 $black: #1E1E1E;
+$transparentBlack: #1e1e1e1a;
 
 /* gradients */
 $blackFade: linear-gradient(180deg, #1e1e1e93 0.1%, #1e1e1e00 99.9%);
@@ -17,6 +18,7 @@ $theme-colors: (
         "yellow": $yellow,
         "white": $white,
         "black": $black,
+        "transparentBlack": $transparentBlack,
         
         "blackFade": $blackFade,
 );
@@ -26,6 +28,7 @@ $theme-colors: (
     yellow: $yellow;
     white: $white;
     black: $black;
+    transparentBlack: $transparentBlack;
 
     blackFade: $blackFade;
 }
