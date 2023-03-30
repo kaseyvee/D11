@@ -1,0 +1,18 @@
+.homepage-story {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  font-size: 24px;
+  padding: 2rem;
+
+  &_first {
+    // background-color: aqua;
+    
+    &_highlight {
+      white-space: nowrap;
+    }
+  }
+}

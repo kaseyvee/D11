@@ -4,7 +4,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 4rem;
+  padding: 4rem;
 
   &_left {
     display: flex;
@@ -12,7 +13,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin: 2rem;
+    width: fit-content;
 
     &_companies {
       display: flex;
@@ -29,8 +30,7 @@
     font-size: 36px;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin: 2rem;
+    gap: 3rem;
   }
 }
 
@@ -38,6 +38,12 @@
   .homepage-partners {
     flex-direction: row;
     height: 100vh;
+    // padding: 4rem;
+    gap: 2rem;
+
+    &_left, &_right {
+      max-width: 40rem;
+    }
 
     &_left {
 
