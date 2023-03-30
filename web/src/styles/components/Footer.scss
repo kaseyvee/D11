@@ -32,7 +32,10 @@
     }
 
     &_map {
-      max-width: 30rem;
+      object-fit: cover;
+      width: 100%;
+      height: 25rem;
+      // aspect-ratio: 2/3;
       align-self: center;
     }
   }

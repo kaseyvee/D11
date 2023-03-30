@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import HeroButton from "./buttons/HeroButton";
+
 // does cody want to be able to change hours/contact?
 
 const Footer: React.FC = () => {
@@ -41,9 +42,10 @@ const Footer: React.FC = () => {
         </div>
 
         <img
-          src="src/assets/map-example.png"
+          src="https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/pin-s+d3af37(-123.10140314000238,49.249254171474)/-123.1015,49.2493,12.98,0/1000x1000@2x?access_token=pk.eyJ1Ijoia2FzZXl2ZWUiLCJhIjoiY2xmdWRhdDR4MDF3MzNobzgyMnRjMmtsMyJ9.fKYQPJBIZ_aO7UNqll1q4A"
           className="footer_top_map"
         />
+
       </div>
 
       <div className="footer_bottom">
