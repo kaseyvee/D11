@@ -2,7 +2,11 @@ import React from "react";
 import HeroButton from "../buttons/HeroButton";
 import externalLinks from "../../helpers/externalLinks";
 
-const NavItems: React.FC = (props: any) => {
+interface IProps {
+  style?: {animation: string};
+}
+
+const NavItems: React.FC<IProps> = (props: IProps) => {
 
   return (
     <div className="nav-items" style={props.style}>
