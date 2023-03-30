@@ -1,5 +1,7 @@
 .nav-button {
+  @include montserrat(500);
   background: transparent !important;
+  border: none;
 }
 
 @media (min-width: 769px) {

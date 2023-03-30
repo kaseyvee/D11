@@ -1,14 +1,19 @@
 $main-button-example-height: 42px;
-$main-button-example-border: 1px solid;
+$main-button-example-border: 1px solid $white;
 
 .button {
     // main styles idk change these its just yolo
-    @include montserrat(500);
+    @include montserrat(700);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: $main-button-example-height;
+    padding: 0 1rem;
     text-decoration: none;
+    background: #0000001a;
+    color: $white;
+    border: $main-button-example-border;
+    border-radius: 50px;
     cursor: pointer;
 
     // add styles if there is a picture on the button too, maybe custom styles for dictating left-icon vs right-icon
