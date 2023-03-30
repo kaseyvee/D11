@@ -1,12 +1,18 @@
 import * as contentful from 'contentful';
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import NavBar from './components/navbar';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
+  const [displayOverlay, setDisplayOverlay] = useState(true);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setDisplayOverlay(false);
+    }, 1000)
+  }, [])
 
   const client = contentful.createClient({
     space: 'juzkia2ppex9',
@@ -26,7 +32,7 @@ const App: React.FC = () => {
 
           <NavBar />
           <Footer/>
-          <div className='fade-overlay'></div>
+          {displayOverlay && <div className='fade-overlay'></div>}
       </BrowserRouter>
   );
 }
