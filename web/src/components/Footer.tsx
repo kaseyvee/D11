@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import HeroButton from "./buttons/HeroButton";
 
 // does cody want to be able to change hours/contact?
+// TODO: find map library
+// BUG: d11 logo from footer showing up when you scroll down to the footer after opening the nav menu on mobile
 
 const Footer: React.FC = () => {
 
@@ -13,7 +15,6 @@ const Footer: React.FC = () => {
 
       <div className="footer_top">
         <div className="footer_top_info">
-
           <div className="footer_top_info_item">
             <h1 className="footer_top_info_item_header">HOURS</h1>
             <div className="footer_top_info_item_content">
@@ -23,14 +24,12 @@ const Footer: React.FC = () => {
               <p><strong>Mon:</strong> Closed</p>
             </div>
           </div>
-
           <div className="footer_top_info_item">
             <h1 className="footer_top_info_item_header">LOCATION</h1>
             <div className="footer_top_info_item_content">
               <p>4063 Main Street, Vancouver, BC</p>
             </div>
           </div>
-
           <div className="footer_top_info_item">
             <h1 className="footer_top_info_item_header">CONTACT</h1>
             <div className="footer_top_info_item_content">
@@ -38,14 +37,12 @@ const Footer: React.FC = () => {
               <p>districteleven_@outlook.com</p>
             </div>
           </div>
-
         </div>
 
         <img
           src="https://api.mapbox.com/styles/v1/mapbox/dark-v10/static/pin-s+d3af37(-123.10140314000238,49.249254171474)/-123.1015,49.2493,12.98,0/1000x1000@2x?access_token=pk.eyJ1Ijoia2FzZXl2ZWUiLCJhIjoiY2xmdWRhdDR4MDF3MzNobzgyMnRjMmtsMyJ9.fKYQPJBIZ_aO7UNqll1q4A"
           className="footer_top_map"
         />
-
       </div>
 
       <div className="footer_bottom">
