@@ -26,6 +26,7 @@ const App: React.FC = () => {
 
           <NavBar />
           <Footer/>
+          <div className='fade-overlay'></div>
       </BrowserRouter>
   );
 }
