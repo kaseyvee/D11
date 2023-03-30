@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     background: rgba(30, 30, 30, 0.59);
-
     
     &_background {
         z-index: -1;
@@ -57,6 +56,14 @@
 
 @media (min-width: 769px) {
     .homepage-hero {
-        justify-content: baseline !important;
+        justify-content: flex-start;
+
+        &_content {
+            margin-left: 10vw;
+
+            &_words {
+                font-size: 50px;
+            }
+        }
     }
 }
