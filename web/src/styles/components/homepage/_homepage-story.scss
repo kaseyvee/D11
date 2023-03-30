@@ -1,18 +1,53 @@
 .homepage-story {
+  background-color: $white;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   gap: 2rem;
+  text-align: center;
   font-size: 24px;
   padding: 2rem;
 
   &_first {
-    // background-color: aqua;
     
     &_highlight {
       white-space: nowrap;
+      @include montserrat(700);
+      position: relative;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        background-color: $yellow;
+        position: absolute;
+        transform: translate(-0.25rem, 0.75rem);
+        width: 11.5rem;
+        height: 1rem;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+  .homepage-story {
+    &_first, &_second {
+      max-width: 50rem;
+      font-size: 36px;
+    }
+
+    &_first {
+
+      &_highlight {
+  
+        &::before {
+          transform: translate(-0.25rem, 1rem);
+          width: 17rem;
+          height: 1.5rem;
+        }
+      }
     }
   }
 }

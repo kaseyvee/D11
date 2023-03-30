@@ -4,7 +4,7 @@ const HomepageStory: React.FC = () => {
       <p className="homepage-story_first">
         From the ashes of New Westminster’s Pho Pho You restaurant comes{" "}
         <span className="homepage-story_first_highlight">
-          <strong>District Eleven</strong>
+          District Eleven
         </span>
         . A new concept restaurant run by cooks for those passionate about food.
       </p>
