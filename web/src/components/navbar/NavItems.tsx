@@ -1,10 +1,8 @@
 import React from "react";
 import HeroButton from "../buttons/HeroButton";
+import externalLinks from "../../helpers/externalLinks";
 
 const NavItems: React.FC = (props: any) => {
-
-  const uberEatsLink = "https://www.ubereats.com/ca/store/district-eleven/LoDFiZK3WDayE9TBfCqlDQ?diningMode=DELIVERY";
-  const reservationsLink = "https://www.exploretock.com/district-eleven-vancouver?tock_source=tock&tock_medium=city_page&tock_content=carousel-District%20Eleven";
 
   return (
     <div className="nav-items" style={props.style}>
@@ -21,13 +19,13 @@ const NavItems: React.FC = (props: any) => {
         className="nav-button"
       />
       <HeroButton
-        to={uberEatsLink}
+        to={externalLinks.uberEats}
         color="white"
         children="UBEREATS"
         className="nav-button"
       />
       <HeroButton
-        to={reservationsLink}
+        to={externalLinks.uberEats}
         color="white"
         children="RESERVATIONS"
         className="nav-button"

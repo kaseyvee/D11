@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
+import externalLinks from "../helpers/externalLinks";
 import HeroButton from "./buttons/HeroButton";
 
 // does cody want to be able to change hours/contact?
@@ -8,9 +9,6 @@ import HeroButton from "./buttons/HeroButton";
 // BUG: d11 logo from footer showing up when you scroll down to the footer after opening the nav menu on mobile- might have to do with mix-blend-mode on the logo so maybe i'll just replace the logo using the same $black we use
 
 const Footer: React.FC = () => {
-
-  const instagramLink = "https://www.instagram.com/_districteleven/";
-  const tikTokLink = "https://www.tiktok.com/@_districteleven";
 
   return (
     <div className="footer">
@@ -55,13 +53,13 @@ const Footer: React.FC = () => {
         />
         <div className="footer_bottom_socials">
           <HeroButton
-            to={instagramLink}
+            to={externalLinks.instagram}
             color="yellow"
             children="Instagram"
             className="footer-button"
           />
           <HeroButton
-            to={tikTokLink}
+            to={externalLinks.tikTok}
             color="yellow"
             children="Tiktok"
             className="footer-button"

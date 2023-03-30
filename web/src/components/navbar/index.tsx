@@ -1,11 +1,7 @@
 import React, { useState } from "react";
-import HeroButton from "../buttons/HeroButton";
 import NavItems from "./NavItems";
 
 const NavBar: React.FC = () => {
-
-  const uberEatsLink = "https://www.ubereats.com/ca/store/district-eleven/LoDFiZK3WDayE9TBfCqlDQ?diningMode=DELIVERY";
-  const reservationsLink = "https://www.exploretock.com/district-eleven-vancouver?tock_source=tock&tock_medium=city_page&tock_content=carousel-District%20Eleven";
 
   const [display, setDisplay] = useState(false)
 

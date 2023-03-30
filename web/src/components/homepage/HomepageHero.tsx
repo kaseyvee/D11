@@ -19,7 +19,6 @@ const HomepageHero: React.FC = () => {
 
             <span className="homepage-hero_content_words_greeting">Mot Hai Ba, Dzo!</span>
         </div>
-        
 
         <div className="homepage-hero_content_buttons">
           <HeroButton>MENU</HeroButton>
