@@ -23,7 +23,7 @@ const NavBar: React.FC = () => {
 
   function handleScrollEffect() {
     const position = window.scrollY;
-    if (position > 500) {
+    if (position > 200) {
       return setScrollStyle(scrollUpStyle);
     }
     return setScrollStyle(scrollDownStyle);
