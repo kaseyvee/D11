@@ -1,9 +1,11 @@
 import HeroButton from "./buttons/HeroButton";
 
+// template to take buttons, menu sections, and title props
+
 const PageHeader: React.FC = () => {
   return (
     <div className="page-header">
-      <h1 className="page-header_name">MENU</h1>
+      <h1 className="page-header_title">MENU</h1>
       <div className="page-header_buttons">
         <HeroButton
           to="/happy-hour"
@@ -20,25 +22,25 @@ const PageHeader: React.FC = () => {
       </div>
       <div className="page-header_menu-sections">
         <HeroButton
-          to="/#adventurous"
+          href="/#adventurous"
           color="white"
           children="ADVENTUROUS"
           className="page-header_menu-sections-button"
         />
         <HeroButton
-          to="/#authentic"
+          href="/#authentic"
           color="white"
           children="AUTHENTIC"
           className="page-header_menu-sections-button"
         />
         <HeroButton
-          to="/#desserts"
+          href="/#desserts"
           color="white"
           children="DESSERTS"
           className="page-header_menu-sections-button"
         />
         <HeroButton
-          to="/#drinks"
+          href="/#drinks"
           color="white"
           children="DRINKS"
           className="page-header_menu-sections-button"
