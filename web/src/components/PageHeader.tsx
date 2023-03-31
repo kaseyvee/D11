@@ -18,6 +18,32 @@ const PageHeader: React.FC = () => {
           className="page-header-button"
         />
       </div>
+      <div className="page-header_menu-sections">
+        <HeroButton
+          to="/"
+          color="white"
+          children="ADVENTUROUS"
+          className="page-header_menu-sections-button"
+        />
+        <HeroButton
+          to="/"
+          color="white"
+          children="AUTHENTIC"
+          className="page-header_menu-sections-button"
+        />
+        <HeroButton
+          to="/"
+          color="white"
+          children="DESSERTS"
+          className="page-header_menu-sections-button"
+        />
+        <HeroButton
+          to="/"
+          color="white"
+          children="DRINKS"
+          className="page-header_menu-sections-button"
+        />
+      </div>
     </div>
   );
 }
