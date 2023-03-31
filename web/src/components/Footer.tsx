@@ -11,7 +11,7 @@ import HeroButton from "./buttons/HeroButton";
 const Footer: React.FC = () => {
 
   return (
-    <div className="footer">
+    <div className="footer" id="footer">
 
       <div className="footer_top">
         <div className="footer_top_info">

@@ -4,7 +4,9 @@ import PageHeader from "../components/PageHeader";
 const MenuPage: React.FC = () => {
   return (
     <div className="menu-page">
-      <PageHeader />
+      <PageHeader
+        title="MENU"
+      />
     </div>
   );
 }

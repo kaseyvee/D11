@@ -2,10 +2,14 @@ import HeroButton from "./buttons/HeroButton";
 
 // template to take buttons, menu sections, and title props
 
-const PageHeader: React.FC = () => {
+interface IProps {
+  title: string;
+}
+
+const PageHeader: React.FC<IProps> = (props: IProps) => {
   return (
     <div className="page-header">
-      <h1 className="page-header_title">MENU</h1>
+      <h1 className="page-header_title">{props.title}</h1>
       <div className="page-header_buttons">
         <HeroButton
           to="/happy-hour"
