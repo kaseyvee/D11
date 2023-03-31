@@ -6,13 +6,13 @@ const PageHeader: React.FC = () => {
       <h1 className="page-header_name">MENU</h1>
       <div className="page-header_buttons">
         <HeroButton
-          to="/"
+          to="/happy-hour"
           color="white"
           children="HAPPY HOUR MENU"
           className="page-header-button"
           />
         <HeroButton
-          to="/"
+          to="/take-out"
           color="white"
           children="TAKE-OUT MENU"
           className="page-header-button"
@@ -20,25 +20,25 @@ const PageHeader: React.FC = () => {
       </div>
       <div className="page-header_menu-sections">
         <HeroButton
-          to="/"
+          to="/#adventurous"
           color="white"
           children="ADVENTUROUS"
           className="page-header_menu-sections-button"
         />
         <HeroButton
-          to="/"
+          to="/#authentic"
           color="white"
           children="AUTHENTIC"
           className="page-header_menu-sections-button"
         />
         <HeroButton
-          to="/"
+          to="/#desserts"
           color="white"
           children="DESSERTS"
           className="page-header_menu-sections-button"
         />
         <HeroButton
-          to="/"
+          to="/#drinks"
           color="white"
           children="DRINKS"
           className="page-header_menu-sections-button"
