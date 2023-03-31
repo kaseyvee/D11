@@ -5,11 +5,11 @@ const HomepagePartners: React.FC = () => {
         <p>As seen in:</p>
 
         <div className="homepage-partners_left_companies">
-          <img src="src/assets/partner-via.svg" />
-          <img src="src/assets/partner-complex.svg" />
-          <img src="src/assets/partner-dished.svg" />
-          <img src="src/assets/partner-narcity.svg" />
-          <img src="src/assets/partner-ot.svg" />
+          <img src="partner-via.svg" />
+          <img src="partner-complex.svg" />
+          <img src="partner-dished.svg" />
+          <img src="partner-narcity.svg" />
+          <img src="partner-ot.svg" />
         </div>
       </div>
 
