@@ -13,6 +13,7 @@ $main-button-example-border: 1px solid;
     border: $main-button-example-border;
     border-radius: 50px;
     cursor: pointer;
+    transition-duration: 200ms;
 
     // add styles if there is a picture on the button too, maybe custom styles for dictating left-icon vs right-icon
     // svg {}

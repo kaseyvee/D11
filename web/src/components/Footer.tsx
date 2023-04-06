@@ -11,7 +11,7 @@ import HeroButton from "./buttons/HeroButton";
 const Footer: React.FC = () => {
 
   return (
-    <div className="footer">
+    <div className="footer" id="footer">
 
       <div className="footer_top">
         <div className="footer_top_info">
@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
       <div className="footer_bottom">
         <div>© 2021 District Eleven</div>
         <img
-          src="src/assets/logo.svg"
+          src="logo.svg"
           className="footer_bottom_logo"
         />
         <div className="footer_bottom_socials">

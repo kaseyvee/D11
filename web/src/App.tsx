@@ -1,7 +1,10 @@
 import * as contentful from 'contentful';
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 import Homepage from "./pages/Homepage";
+import MenuPage from './pages/MenuPage';
+
 import NavBar from './components/navbar';
 import Footer from './components/Footer';
 
@@ -27,7 +30,7 @@ const App: React.FC = () => {
       <BrowserRouter>
           <Routes>
             <Route path="/" element={<Homepage/>}/>
-            {/* <Route path="/menu" element={<MenuPage/>}/> */}
+            <Route path="/menu" element={<MenuPage/>}/>
           </Routes>
 
           <NavBar />

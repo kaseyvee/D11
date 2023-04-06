@@ -8,10 +8,10 @@
 $yellow: #D3AF37;
 $white: #FFFCF5;
 $black: #1E1E1E;
-$transparentBlack: #1e1e1e1a;
+$transparentBlack: rgba(30, 30, 30, 0.102);
 
 /* gradients */
-$blackFade: linear-gradient(180deg, #1e1e1e93 0.1%, #1e1e1e00 99.9%);
+$blackFade: linear-gradient(180deg, #1e1e1edd 0.1%, #1e1e1e00 99.9%);
 
 /* theme-colors map, remnant of Bootstrap approach, still used for our checkboxes */
 $theme-colors: (
