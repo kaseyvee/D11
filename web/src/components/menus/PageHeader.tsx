@@ -1,7 +1,5 @@
 import HeroButton from "../buttons/HeroButton";
 
-// template to take buttons, menu sections, and title props
-
 interface IProps {
   title: string;
 }
@@ -11,23 +9,29 @@ const PageHeader: React.FC<IProps> = (props: IProps) => {
     <div className="page-header">
       <h1 className="page-header_title">{props.title}</h1>
       <div className="page-header_buttons">
-        <HeroButton
+        {props.title !== "HAPPY HOUR MENU" && <HeroButton
           to="/happy-hour"
           color="white"
           children="HAPPY HOUR MENU"
           className="page-header-button"
-          />
-        <HeroButton
+          />}
+        {props.title !== "TAKE-OUT MENU" && <HeroButton
           to="/take-out"
           color="white"
           children="TAKE-OUT MENU"
           className="page-header-button"
-        />
+        />}
+        {props.title !== "MENU" && <HeroButton
+          to="/menu"
+          color="white"
+          children="DINNER MENU"
+          className="page-header-button"
+        />}
       </div>
       <ul className="page-header_menu-sections">
         <li>  
           <HeroButton
-            href="/#adventurous"
+            href="#adventurous"
             color="white"
             children="ADVENTUROUS"
             className="page-header_menu-sections-button"
@@ -35,7 +39,7 @@ const PageHeader: React.FC<IProps> = (props: IProps) => {
         </li>
         <li>  
           <HeroButton
-            href="/#authentic"
+            href="#authentic"
             color="white"
             children="AUTHENTIC"
             className="page-header_menu-sections-button"
@@ -43,7 +47,7 @@ const PageHeader: React.FC<IProps> = (props: IProps) => {
         </li>
         <li>  
           <HeroButton
-            href="/#desserts"
+            href="#desserts"
             color="white"
             children="DESSERTS"
             className="page-header_menu-sections-button"
@@ -51,7 +55,7 @@ const PageHeader: React.FC<IProps> = (props: IProps) => {
         </li>
         <li>  
           <HeroButton
-            href="/#drinks"
+            href="#drinks"
             color="white"
             children="DRINKS"
             className="page-header_menu-sections-button"

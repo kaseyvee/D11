@@ -1,0 +1,40 @@
+.menu-item {
+  &_main {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    &_words {
+      p {
+        font-style: italic;
+      }
+    }
+
+    &_price {
+      font-style: italic;
+    }
+  }
+
+  &_variation {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+
+    &_words {
+      span, h3, p {
+        display: inline;
+        margin-right: 0.5rem;
+      }
+
+      p {
+        font-style: italic;
+      }
+    }
+
+    &_price {
+      font-style: italic;
+    }
+  }
+}

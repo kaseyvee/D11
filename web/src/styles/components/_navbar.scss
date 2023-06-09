@@ -3,13 +3,14 @@
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 100;
 
   &_menu-open, &_menu-close {
     position: absolute;
     top: 0;
     left: 0;
     margin: 2rem;
-    z-index: 2;
+    z-index: 110;
     cursor: pointer;
   }
 
