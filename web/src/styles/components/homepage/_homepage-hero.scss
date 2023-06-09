@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     background: rgba(30, 30, 30, 0.59);
+    width: 100%;
+    padding-inline: 2rem;
     
     &_background {
         z-index: -1;
@@ -35,10 +37,6 @@
             &_header {
                 @include montserrat(700);
                 color: #FFFCF5;
-                
-                // white-space: nowrap;
-                // overflow: hidden;
-                // text-overflow: ellipsis;
             }
     
             &_greeting {
@@ -57,11 +55,9 @@
 
 @media (min-width: 769px) {
     .homepage-hero {
-        justify-content: flex-start;
+        // justify-content: flex-start;
 
         &_content {
-            margin-left: 10vw;
-            margin-top: 5rem;
 
             &_words {
                 font-size: 50px;

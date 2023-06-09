@@ -1,11 +1,18 @@
 .homepage-partners {
   background-color: $white;
+  width: 100%;
+  padding: 4rem 2rem;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 4rem;
-  padding: 0 4rem;
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
 
   &_left {
     display: flex;
@@ -13,7 +20,6 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    height: 100vh;
     
     &_companies {
       display: flex;
@@ -33,15 +39,17 @@
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
-    height: 100vh;
   }
 }
 
 @media (min-width: 769px) {
   .homepage-partners {
-    flex-direction: row;
-    height: 100vh;
-    gap: 2rem;
+    padding-top: 10rem;
+
+    .wrapper {
+      flex-direction: row;
+      gap: 2rem;
+    }
 
     &_left, &_right {
       max-width: 40rem;

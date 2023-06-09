@@ -3,8 +3,16 @@
   @include montserrat;
   padding: 2rem;
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  
+  .wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+
+  }
 
   &_top {
     display: flex;
@@ -47,6 +55,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    width: 100%;
 
     &_logo {
       mix-blend-mode: lighten;

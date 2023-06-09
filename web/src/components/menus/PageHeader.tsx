@@ -24,32 +24,40 @@ const PageHeader: React.FC<IProps> = (props: IProps) => {
           className="page-header-button"
         />
       </div>
-      <div className="page-header_menu-sections">
-        <HeroButton
-          href="/#adventurous"
-          color="white"
-          children="ADVENTUROUS"
-          className="page-header_menu-sections-button"
-        />
-        <HeroButton
-          href="/#authentic"
-          color="white"
-          children="AUTHENTIC"
-          className="page-header_menu-sections-button"
-        />
-        <HeroButton
-          href="/#desserts"
-          color="white"
-          children="DESSERTS"
-          className="page-header_menu-sections-button"
-        />
-        <HeroButton
-          href="/#drinks"
-          color="white"
-          children="DRINKS"
-          className="page-header_menu-sections-button"
-        />
-      </div>
+      <ul className="page-header_menu-sections">
+        <li>  
+          <HeroButton
+            href="/#adventurous"
+            color="white"
+            children="ADVENTUROUS"
+            className="page-header_menu-sections-button"
+          />
+        </li>
+        <li>  
+          <HeroButton
+            href="/#authentic"
+            color="white"
+            children="AUTHENTIC"
+            className="page-header_menu-sections-button"
+          />
+        </li>
+        <li>  
+          <HeroButton
+            href="/#desserts"
+            color="white"
+            children="DESSERTS"
+            className="page-header_menu-sections-button"
+          />
+        </li>
+        <li>  
+          <HeroButton
+            href="/#drinks"
+            color="white"
+            children="DRINKS"
+            className="page-header_menu-sections-button"
+          />
+        </li>
+      </ul>
     </div>
   );
 }
