@@ -5,8 +5,30 @@
     gap: 1rem;
 
     &_words {
+      // color: $white;
+
       p {
         font-style: italic;
+        line-height: 1.3rem;
+      }
+
+      h3, span {
+        display: inline;
+        margin-right: 0.5rem;
+      }
+
+      span {
+        color: $yellow;
+        font-style: italic;
+      }
+
+      &_diets {
+        display: inline;
+        
+        img {
+          margin-right: 0.25rem;
+          width: 1rem;
+        }
       }
     }
 

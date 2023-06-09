@@ -2,6 +2,7 @@ import { useFetchMenu } from "../helpers/useFetchMenu";
 
 import MenuSection from "../components/menus/MenuSection";
 import PageHeader from "../components/menus/PageHeader";
+import MenuNav from "../components/menus/MenuNav";
 
 const MenuPage: React.FC = () => {
   const menu: any = useFetchMenu();
@@ -11,6 +12,7 @@ const MenuPage: React.FC = () => {
       <PageHeader
         title="MENU"
       />
+      <MenuNav />
       {Object.keys(menu).length && <div className="menu-page_sections">
         <MenuSection menuItems={menu.adventurous} />
         <MenuSection menuItems={menu.authentic} />

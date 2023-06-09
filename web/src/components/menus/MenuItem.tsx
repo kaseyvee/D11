@@ -5,6 +5,7 @@ interface IProps {
       vietnamese: string;
     };
     name: string;
+    subHeading?: string;
     description: string;
     happyHour: boolean;
     happyHourPrice?: number;
@@ -33,17 +34,27 @@ const MenuItem: React.FC<IProps> = ({ menuItem }) => {
         </div>
 
         <div className="menu-item_variation_price">
-          <span>6</span>
+          <span>{variation.price}</span>
         </div>
       </div>
     );
   });
+
+  const diets = menuItem.dietRestrictions?.map(diet => {
+    return (
+      <img src={diet.image} alt={`${diet.dietaryType}`} />
+    )
+  })
 
   return (
     <li className="menu-item">
       <div className="menu-item_main">
         <div className="menu-item_main_words">
           <h3>{menuItem.name}</h3>
+          {menuItem.subHeading && <span>{menuItem.subHeading}</span>}
+          {menuItem.dietRestrictions && <div className="menu-item_main_words_diets">
+            {diets}
+          </div>}
           <p>{menuItem.description}</p>
         </div>
 

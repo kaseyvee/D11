@@ -26,20 +26,20 @@
     gap: 1rem;
   }
 
-  &_menu-sections {
-    background-color: #1e1e1e4a;
-    display: flex;
-    position: absolute;
-    bottom: 0;
-    width: 100vw;
-    overflow: scroll;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+  // &_menu-sections {
+  //   background-color: #1e1e1e4a;
+  //   display: flex;
+  //   position: absolute;
+  //   bottom: 0;
+  //   width: 100vw;
+  //   overflow: scroll;
+  //   -ms-overflow-style: none;  /* IE and Edge */
+  //   scrollbar-width: none;  /* Firefox */
 
-    &::-webkit-scrollbar {
-      display: none; /* Chrome */
-    }
-  }
+  //   &::-webkit-scrollbar {
+  //     display: none; /* Chrome */
+  //   }
+  // }
 }
 
 @media (min-width: 508px) {

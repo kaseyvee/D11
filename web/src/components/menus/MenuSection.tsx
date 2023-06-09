@@ -34,7 +34,7 @@ const MenuSection: React.FC<IProps> = ({ menuItems }) => {
   })
 
   return (
-    <section className="menu-section">
+    <section className="menu-section" id={categoryEnglish.toLowerCase()}>
       <div className="wrapper">
         <header className="menu-section_header">
           <h2>{categoryEnglish}</h2>
