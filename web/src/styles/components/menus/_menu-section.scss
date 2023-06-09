@@ -1,7 +1,7 @@
 .menu-section {
   display: flex;
   justify-content: center;
-  padding: 4rem 2rem;
+  // padding: 4rem 2rem;
   color: $white;
   background-color: $black;
 
@@ -23,5 +23,7 @@
   
   &_menu-items {
     width: 100%;
+    display: grid;
+    gap: 2rem;
   }
 }

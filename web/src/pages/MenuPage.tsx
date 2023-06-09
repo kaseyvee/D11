@@ -1,25 +1,21 @@
-import { useEffect, useState } from "react";
+import { useFetchMenu } from "../helpers/useFetchMenu";
+
 import MenuSection from "../components/menus/MenuSection";
 import PageHeader from "../components/menus/PageHeader";
-import { getMenu } from "../helpers/getMenu";
-import getOrganizedMenu from "../helpers/getOrganizedMenu";
 
 const MenuPage: React.FC = () => {
-  const [menuItems, setMenuItems] = useState<any>([]);
-
-  useEffect(() => {
-    getMenu()
-      .then((res) => setMenuItems(getOrganizedMenu(res)))
-  }, [])
-
-  console.log(menuItems)
+  const menu: any = useFetchMenu();
 
   return (
     <div className="menu-page">
       <PageHeader
         title="MENU"
       />
-      <MenuSection />
+      {Object.keys(menu).length && <div className="menu-page_sections">
+        <MenuSection menuItems={menu.adventurous} />
+        <MenuSection menuItems={menu.authentic} />
+        <MenuSection menuItems={menu.desserts} />
+      </div>}
     </div>
   );
 }
