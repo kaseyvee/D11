@@ -1,12 +1,13 @@
 import React from "react";
-import PageHeader from "../components/PageHeader";
-
+import MenuSectionHeader from "../components/menus/MenuSectionHeader";
+import PageHeader from "../components/menus/PageHeader";
 const MenuPage: React.FC = () => {
   return (
     <div className="menu-page">
       <PageHeader
         title="MENU"
       />
+      <MenuSectionHeader />
     </div>
   );
 }

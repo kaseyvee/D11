@@ -9,38 +9,48 @@ interface IProps {
 const NavItems: React.FC<IProps> = (props: IProps) => {
 
   return (
-    <div className="nav-items" style={props.style}>
-      <HeroButton
-        to="/"
-        color="white"
-        children="HOME"
-        className="nav-button"
-      />
-      <HeroButton
-        to="/menu"
-        color="white"
-        children="MENU"
-        className="nav-button"
-      />
-      <HeroButton
-        to={externalLinks.uberEats}
-        color="white"
-        children="UBEREATS"
-        className="nav-button"
-      />
-      <HeroButton
-        to={externalLinks.uberEats}
-        color="white"
-        children="RESERVATIONS"
-        className="nav-button"
-      />
-      <HeroButton
-        href="/#footer"
-        color="white"
-        children="CONTACT US"
-        className="nav-button"
-      />
-    </div>
+    <ul className="nav-items" style={props.style}>
+      <li>  
+        <HeroButton
+          to="/"
+          color="white"
+          children="HOME"
+          className="nav-button"
+        />
+      </li>
+      <li>  
+        <HeroButton
+          to="/menu"
+          color="white"
+          children="MENU"
+          className="nav-button"
+        />
+      </li>
+      <li>  
+        <HeroButton
+          to={externalLinks.uberEats}
+          color="white"
+          children="UBEREATS"
+          className="nav-button"
+        />
+      </li>
+      <li>  
+        <HeroButton
+          to={externalLinks.reservations}
+          color="white"
+          children="RESERVATIONS"
+          className="nav-button"
+        />
+      </li>
+      <li>  
+        <HeroButton
+          href="/#footer"
+          color="white"
+          children="CONTACT US"
+          className="nav-button"
+        />
+      </li>
+    </ul>
   )
 }
 

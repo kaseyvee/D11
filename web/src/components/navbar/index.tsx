@@ -32,7 +32,7 @@ const NavBar: React.FC = () => {
   document.addEventListener("scroll", handleScrollEffect);
 
   return (
-    <div className="navbar">
+    <nav className="navbar">
       {display ?
         <img
           src="menu-close-button.svg"
@@ -67,7 +67,7 @@ const NavBar: React.FC = () => {
           <NavItems />
         </div>
       </div>}
-    </div>
+    </nav>
   );
 }
 
