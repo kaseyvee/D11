@@ -2,6 +2,7 @@ import MenuItem from "./MenuItem";
 
 interface IProps {
   menuItems: {
+    soldOut: boolean;
     category: {
       english: string;
       vietnamese: string;

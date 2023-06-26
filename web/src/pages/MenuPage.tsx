@@ -14,9 +14,9 @@ const MenuPage: React.FC = () => {
       />
       <MenuNav />
       {Object.keys(menu).length && <div className="menu-page_sections">
-        <MenuSection menuItems={menu.adventurous} />
-        <MenuSection menuItems={menu.authentic} />
-        <MenuSection menuItems={menu.desserts} />
+        {menu.adventurous.length && <MenuSection menuItems={menu.adventurous} />}
+        {menu.authentic.length && <MenuSection menuItems={menu.authentic} />}
+        {menu.desserts.length && <MenuSection menuItems={menu.desserts} />}
       </div>}
     </div>
   );
