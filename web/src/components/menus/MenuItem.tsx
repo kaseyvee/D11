@@ -1,5 +1,6 @@
 interface IProps {
   menuItem: {
+    soldOut: boolean;
     category: {
       english: string;
       vietnamese: string;
@@ -42,12 +43,12 @@ const MenuItem: React.FC<IProps> = ({ menuItem }) => {
 
   const diets = menuItem.dietRestrictions?.map(diet => {
     return (
-      <img src={diet.image} alt={`${diet.dietaryType}`} />
+      <img key={menuItem.name + diet.dietaryType} src={diet.image} alt={`${diet.dietaryType}`} />
     )
   })
 
   return (
-    <li className="menu-item">
+    <li className={`menu-item ${menuItem.soldOut && `sold-out`}`}>
       <div className="menu-item_main">
         <div className="menu-item_main_words">
           <h3>{menuItem.name}</h3>

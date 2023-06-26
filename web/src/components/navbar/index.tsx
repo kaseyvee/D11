@@ -64,7 +64,7 @@ const NavBar: React.FC = () => {
             alt="district eleven logo"
             className="navbar_overlay_items_logo"
           />
-          <NavItems />
+          <NavItems />kaseu
         </div>
       </div>}
     </nav>
