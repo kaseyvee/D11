@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 import { useFetchMenu } from "./helpers/useFetchMenu";
 import { useFetchDrinksMenu } from "./helpers/useFetchDrinksMenu";
@@ -15,7 +16,6 @@ import MenuPage from "./pages/MenuPage";
 import HappyHourPage from "./pages/HappyHourPage";
 import TakeOutPage from "./pages/TakeOutPage";
 import ErrorPage from "./pages/ErrorPage";
-import { AnimatePresence } from "framer-motion";
 
 export const MenuContext = createContext({});
 
