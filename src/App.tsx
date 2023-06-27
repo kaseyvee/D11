@@ -4,13 +4,14 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useFetchMenu } from "./helpers/useFetchMenu";
 import { useFetchDrinksMenu } from "./helpers/useFetchDrinksMenu";
 
-import NavBar from './components/navbar';
-import Footer from './components/Footer';
+import NavBar from "./components/navbar";
+import Footer from "./components/Footer";
 
 import Homepage from "./pages/Homepage";
-import MenuPage from './pages/MenuPage';
-import HappyHourPage from './pages/HappyHourPage';
-import TakeOutPage from './pages/TakeOutPage';
+import MenuPage from "./pages/MenuPage";
+import HappyHourPage from "./pages/HappyHourPage";
+import TakeOutPage from "./pages/TakeOutPage";
+import ErrorPage from "./pages/ErrorPage";
 
 export const MenuContext = createContext({});
 
@@ -19,21 +20,22 @@ const App: React.FC = () => {
   const drinks: any = useFetchDrinksMenu();
 
   return (
-      <BrowserRouter>
-          <NavBar />
-          
-          <MenuContext.Provider value={{menu, drinks}}>
-            <Routes>
-              <Route path="/" element={<Homepage/>}/>
-              <Route path="/menu" element={<MenuPage/>}/>
-              <Route path="/happy-hour" element={<HappyHourPage/>}/>
-              <Route path="/take-out" element={<TakeOutPage/>}/>
-            </Routes>
-          </MenuContext.Provider>
+    <BrowserRouter>
+      <NavBar />
 
-          <Footer/>
-      </BrowserRouter>
+      <MenuContext.Provider value={{ menu, drinks }}>
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/menu" element={<MenuPage />} />
+          <Route path="/happy-hour" element={<HappyHourPage />} />
+          <Route path="/take-out" element={<TakeOutPage />} />
+          <Route path="*" element={<ErrorPage />} />
+        </Routes>
+      </MenuContext.Provider>
+
+      <Footer />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;

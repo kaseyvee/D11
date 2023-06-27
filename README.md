@@ -3,8 +3,8 @@ to do:
 - error page
 - optimize assets
 - get better restaurant/food photos
+- make better diet icons
 
 stretch:
-- make better diet icons
 - make hours, contacts, and external links manageable through contentful
 - implement 3rd party map in footer
