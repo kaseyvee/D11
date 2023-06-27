@@ -6,7 +6,7 @@ const HomepageHero: React.FC = () => {
     <section className="homepage-hero">
       <div className="homepage-hero_background">
         <img 
-          src="background.jpg"
+          src="/background.jpg"
           alt="background"
           className="homepage-hero_background_img"
         />

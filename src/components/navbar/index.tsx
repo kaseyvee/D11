@@ -48,14 +48,14 @@ const NavBar: React.FC = () => {
     <nav className="navbar" style={!display ? scrollStyle : {}}>
       {display ? (
         <img
-          src="menu-close-button.svg"
+          src="/menu-close-button.svg"
           alt="exit menu"
           className="navbar_menu-close"
           onClick={handleMenuToggle}
         />
       ) : (
         <img
-          src="menu-open-button.svg"
+          src="/menu-open-button.svg"
           alt="open menu"
           className="navbar_menu-open"
           onClick={handleMenuToggle}
@@ -79,7 +79,7 @@ const NavBar: React.FC = () => {
           >
             <div className="navbar_overlay_items">
               <img
-                src="logo.svg"
+                src="/logo.svg"
                 alt="district eleven logo"
                 className="navbar_overlay_items_logo"
               />

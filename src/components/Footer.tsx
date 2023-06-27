@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
         <div className="footer_bottom">
           <div>© 2021 District Eleven</div>
           <img
-            src="logo.svg"
+            src="/logo.svg"
             className="footer_bottom_logo"
           />
           <div className="footer_bottom_socials">
