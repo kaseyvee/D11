@@ -5,8 +5,11 @@ import MenuNav from "../components/menus/MenuNav";
 import MenuSection from "../components/menus/MenuSection";
 import PageHeader from "../components/menus/PageHeader";
 import getMenuType from "../helpers/getMenuType";
+import useScrollToTop from "../helpers/useScrollToTop";
 
 const HappyHourPage: React.FC = () => {
+  useScrollToTop();
+
   const { menu }: any = useContext(MenuContext);
   const { drinks }: any = useContext(MenuContext);
 
@@ -14,7 +17,7 @@ const HappyHourPage: React.FC = () => {
   const happyHourDrinksMenu = getMenuType(drinks, "happyHour");
 
   return (
-    <main className="happy-hour-page">
+    <main className="happy-hour-page page">
       <PageHeader
         title="HAPPY HOUR MENU"
       />

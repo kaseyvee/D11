@@ -4,13 +4,16 @@ import MenuNav from "../components/menus/MenuNav";
 import DrinkSection from "../components/menus/drinks/DrinkSection";
 import { useContext } from "react";
 import { MenuContext } from "../App";
+import useScrollToTop from "../helpers/useScrollToTop";
 
 const MenuPage: React.FC = () => {
+  useScrollToTop();
+
   const { menu }: any = useContext(MenuContext);
   const { drinks }: any = useContext(MenuContext);
 
   return (
-    <main className="menu-page">
+    <main className="menu-page page">
       <PageHeader
         title="MENU"
       />

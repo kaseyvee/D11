@@ -45,7 +45,7 @@ const NavItems: React.FC<IProps> = (props: IProps) => {
       </li>
       <li>  
         <HeroButton
-          href="/#footer"
+          href="#footer"
           color="white"
           children="CONTACT US"
           className="nav-button"

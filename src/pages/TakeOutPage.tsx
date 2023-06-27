@@ -5,8 +5,11 @@ import MenuNav from "../components/menus/MenuNav";
 import MenuSection from "../components/menus/MenuSection";
 import PageHeader from "../components/menus/PageHeader";
 import getMenuType from "../helpers/getMenuType";
+import useScrollToTop from "../helpers/useScrollToTop";
 
 const TakeOutPage: React.FC = () => {
+  useScrollToTop();
+
   const { menu }: any = useContext(MenuContext);
   const { drinks }: any = useContext(MenuContext);
 
@@ -14,7 +17,7 @@ const TakeOutPage: React.FC = () => {
   const takeOutDrinksMenu = getMenuType(drinks, "takeOut");
 
   return (
-    <main className="take-out-page">
+    <main className="take-out-page page">
       <PageHeader title="TAKE-OUT MENU" />
       <MenuNav />
       {Object.keys(takeOutMenu).length > 0 && (
