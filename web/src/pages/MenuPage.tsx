@@ -12,7 +12,7 @@ const MenuPage: React.FC = () => {
   console.log(drinks)
 
   return (
-    <div className="menu-page">
+    <main className="menu-page">
       <PageHeader
         title="MENU"
       />
@@ -26,7 +26,7 @@ const MenuPage: React.FC = () => {
         {drinks.cocktail.length && <DrinkSection drinkItems={drinks.cocktail} />}
         {drinks.cocktail.length && <DrinkSection drinkItems={drinks.cocktail} />}
       </div>}
-    </div>
+    </main>
   );
 }
 

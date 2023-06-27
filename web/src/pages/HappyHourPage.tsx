@@ -3,12 +3,12 @@ import PageHeader from "../components/menus/PageHeader";
 
 const HappyHourPage: React.FC = () => {
   return (
-    <div className="happy-hour-page">
+    <main className="happy-hour-page">
       <PageHeader
         title="HAPPY HOUR MENU"
       />
       <MenuSection />
-    </div>
+    </main>
   );
 }
 

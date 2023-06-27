@@ -3,12 +3,12 @@ import PageHeader from "../components/menus/PageHeader";
 
 const TakeOutPage: React.FC = () => {
   return (
-    <div className="take-out-page">
+    <main className="take-out-page">
       <PageHeader
         title="TAKE-OUT MENU"
       />
       <MenuSection />
-    </div>
+    </main>
   );
 }
 
