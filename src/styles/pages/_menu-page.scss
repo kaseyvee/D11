@@ -1,0 +1,16 @@
+.menu-page {
+  &_sections {
+    display: grid;
+    gap: 4rem;
+    padding: 4rem 2rem;
+
+    &_drinks-header {
+      @extend .menu-section_header;
+      color: $white;
+      margin: 0;
+      width: min(100%, 700px);
+      justify-self: center;
+      transform: translateY(30px);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.tap-item {
+  &_main {
+    display: flex;
+    justify-content: space-between;
+
+    &_words {
+      &_brewery {
+        font-weight: 700;
+      }
+
+      &_alcohol-content {
+        font-style: italic;
+        color: $yellow;
+      }
+    }
+    
+    &_price {
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+}
