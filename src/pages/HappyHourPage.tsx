@@ -6,6 +6,7 @@ import MenuSection from "../components/menuPages/food/MenuSection";
 import PageHeader from "../components/menuPages/PageHeader";
 import getMenuType from "../helpers/getMenuType";
 import useScrollToTop from "../helpers/useScrollToTop";
+import DietTable from "../components/menuPages/food/DietTable";
 
 const HappyHourPage: React.FC = () => {
   useScrollToTop();
@@ -26,6 +27,7 @@ const HappyHourPage: React.FC = () => {
         {happyHourMenu.adventurous.length > 0 && <MenuSection happyHour={true} menuItems={happyHourMenu.adventurous} />}
         {happyHourMenu.authentic.length > 0 && <MenuSection happyHour={true} menuItems={happyHourMenu.authentic} />}
         {happyHourMenu.desserts.length > 0 && <MenuSection happyHour={true} menuItems={happyHourMenu.desserts} />}
+        <DietTable />
       </div>}
       {Object.keys(happyHourDrinksMenu).length && <div className="menu-page_sections" id="drinks">
         <header className="menu-page_sections_drinks-header">

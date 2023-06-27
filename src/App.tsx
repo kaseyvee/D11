@@ -12,18 +12,20 @@ import MenuPage from "./pages/MenuPage";
 import HappyHourPage from "./pages/HappyHourPage";
 import TakeOutPage from "./pages/TakeOutPage";
 import ErrorPage from "./pages/ErrorPage";
+import { useFetchDiets } from "./helpers/useFetchDiets";
 
 export const MenuContext = createContext({});
 
 const App: React.FC = () => {
   const menu: any = useFetchMenu();
   const drinks: any = useFetchDrinksMenu();
+  const diets: any = useFetchDiets();
 
   return (
     <BrowserRouter>
       <NavBar />
 
-      <MenuContext.Provider value={{ menu, drinks }}>
+      <MenuContext.Provider value={{ menu, drinks, diets }}>
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/menu" element={<MenuPage />} />
