@@ -13,10 +13,11 @@ const Footer: React.FC = () => {
             <div className="footer_top_info_item">
               <header className="footer_top_info_item_header">HOURS</header>
               <div className="footer_top_info_item_content">
-                <p><strong>Fri & Sat:</strong> 5 pm - 2 pm</p>
-                <p><strong>Tues, Wed, Thurs:</strong> 5 pm - 1 am</p>
-                <p><strong>Sun:</strong> 5pm - 12am</p>
                 <p><strong>Mon:</strong> Closed</p>
+                <p><strong>Tues - Thurs:</strong> 5 pm - 1 am</p>
+                <p><strong>Fri:</strong> 5 pm - 2 am</p>
+                <p><strong>Sat:</strong> 11am - 3pm, 5 pm - 2 am</p>
+                <p><strong>Sun:</strong> 11am - 3pm, 5pm - 12am</p>
               </div>
             </div>
             <div className="footer_top_info_item">

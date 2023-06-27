@@ -12,11 +12,13 @@ const HomepagePartners: React.FC = () => {
           <p>As seen in:</p>
 
           <div className="homepage-partners_left_companies">
-            <img src={via} />
-            <img src={complex} />
-            <img src={dished} />
-            <img src={narcity} />
-            <img src={ot} />
+            <li>
+              <img src={via} alt="Vancouver Is Awesome" />
+            </li>
+            <img src={complex} alt="Complex" />
+            <img src={dished} alt="Dished" />
+            <img src={narcity} alt="Narcity" />
+            <img src={ot} alt="OpenTable Diners' Choice 2022" />
           </div>
         </div>
 

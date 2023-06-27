@@ -1,6 +1,8 @@
 to do:
 - optimize assets
 - get better restaurant/food photos
+- change drink category names
+- check if vietnamese categories are correct lol
 - ~~make better diet icons~~
 - ~~create diet description component~~
 - ~~error page~~
