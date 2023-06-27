@@ -1,15 +1,13 @@
-import { useFetchMenu } from "../helpers/useFetchMenu";
-import { useFetchDrinksMenu } from "../helpers/useFetchDrinksMenu";
-
 import MenuSection from "../components/menus/MenuSection";
 import PageHeader from "../components/menus/PageHeader";
 import MenuNav from "../components/menus/MenuNav";
 import DrinkSection from "../components/menus/drinks/DrinkSection";
+import { useContext } from "react";
+import { MenuContext } from "../App";
 
 const MenuPage: React.FC = () => {
-  const menu: any = useFetchMenu();
-  const drinks: any = useFetchDrinksMenu();
-  console.log(drinks)
+  const { menu }: any = useContext(MenuContext);
+  const { drinks }: any = useContext(MenuContext);
 
   return (
     <main className="menu-page">
