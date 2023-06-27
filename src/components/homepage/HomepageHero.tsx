@@ -1,12 +1,13 @@
 import externalLinks from "../../helpers/externalLinks";
 import HeroButton from "../HeroButton";
+import background from "../../assets/background.jpg";
 
 const HomepageHero: React.FC = () => {
   return (
     <section className="homepage-hero">
       <div className="homepage-hero_background">
         <img 
-          src="/background.jpg"
+          src={background}
           alt="background"
           className="homepage-hero_background_img"
         />

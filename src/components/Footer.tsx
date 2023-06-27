@@ -1,5 +1,6 @@
 import externalLinks from "../helpers/externalLinks";
 import HeroButton from "./HeroButton";
+import logo from "../assets/logo.svg";
 
 const Footer: React.FC = () => {
 
@@ -42,7 +43,7 @@ const Footer: React.FC = () => {
         <div className="footer_bottom">
           <div>© 2021 District Eleven</div>
           <img
-            src="/logo.svg"
+            src={logo}
             className="footer_bottom_logo"
           />
           <div className="footer_bottom_socials">
