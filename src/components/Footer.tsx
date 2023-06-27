@@ -1,12 +1,5 @@
-import React from "react";
 import externalLinks from "../helpers/externalLinks";
-import HeroButton from "./buttons/HeroButton";
-
-// does cody want to be able to change hours/contact?
-// TODO:
-  // - find map library
-  // - template for extracting hours/contact from contentful
-// BUG: d11 logo from footer showing up when you scroll down to the footer after opening the nav menu on mobile- might have to do with mix-blend-mode on the logo so maybe i'll just replace the logo using the same $black we use
+import HeroButton from "./HeroButton";
 
 const Footer: React.FC = () => {
 

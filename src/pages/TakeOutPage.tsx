@@ -1,11 +1,12 @@
 import { useContext } from "react";
 import { MenuContext } from "../App";
-import DrinkSection from "../components/menus/drinks/DrinkSection";
-import MenuNav from "../components/menus/MenuNav";
-import MenuSection from "../components/menus/MenuSection";
-import PageHeader from "../components/menus/PageHeader";
+import DrinkSection from "../components/menuPages/drinks/DrinkSection";
+import MenuNav from "../components/menuPages/MenuNav";
+import MenuSection from "../components/menuPages/food/MenuSection";
+import PageHeader from "../components/menuPages/PageHeader";
 import getMenuType from "../helpers/getMenuType";
 import useScrollToTop from "../helpers/useScrollToTop";
+import DietTable from "../components/menuPages/food/DietTable";
 
 const TakeOutPage: React.FC = () => {
   useScrollToTop();
@@ -31,6 +32,7 @@ const TakeOutPage: React.FC = () => {
           {takeOutMenu.desserts.length > 0 && (
             <MenuSection menuItems={takeOutMenu.desserts} />
           )}
+          <DietTable />
         </div>
       )}
       {Object.keys(takeOutDrinksMenu).length && (

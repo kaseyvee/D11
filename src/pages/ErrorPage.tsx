@@ -1,4 +1,4 @@
-import HeroButton from "../components/buttons/HeroButton";
+import HeroButton from "../components/HeroButton";
 import externalLinks from "../helpers/externalLinks";
 
 const ErrorPage: React.FC = () => {
@@ -6,18 +6,18 @@ const ErrorPage: React.FC = () => {
     <main className="homepage-hero">
       <div className="wrapper">
         <div className="homepage-hero_content">
-          <div className="homepage-hero_content_words">
-            <p className="homepage-hero_content_words_header">
+          <h1 className="homepage-hero_content_words">
+            <span className="homepage-hero_content_words_header">
               Giời ơi!
-            </p>
-            <p className="homepage-hero_content_words_header">
+            </span>
+            <span className="homepage-hero_content_words_header">
               We couldn't find that. :(
-            </p>
+            </span>
 
             <span className="homepage-hero_content_words_greeting">
               Maybe you meant...
             </span>
-          </div>
+          </h1>
 
           <div className="homepage-hero_content_buttons">
             <HeroButton to="/menu" color="white" children="MENU" />

@@ -1,5 +1,5 @@
 import externalLinks from "../../helpers/externalLinks";
-import HeroButton from "../buttons/HeroButton";
+import HeroButton from "../HeroButton";
 
 const HomepageHero: React.FC = () => {
   return (
@@ -14,13 +14,13 @@ const HomepageHero: React.FC = () => {
 
       <div className="wrapper">
         <div className="homepage-hero_content">
-          <div className="homepage-hero_content_words">
-              <p className="homepage-hero_content_words_header">Late night.</p>
-              <p className="homepage-hero_content_words_header">Asian-fusion.</p>
-              <p className="homepage-hero_content_words_header">Snack bar.</p>
+          <h1 className="homepage-hero_content_words">
+              <span className="homepage-hero_content_words_header">Late night.</span>
+              <span className="homepage-hero_content_words_header">Asian-fusion.</span>
+              <span className="homepage-hero_content_words_header">Snack bar.</span>
 
               <span className="homepage-hero_content_words_greeting">Mot Hai Ba, Dzo!</span>
-          </div>
+          </h1>
 
           <div className="homepage-hero_content_buttons">
             <HeroButton

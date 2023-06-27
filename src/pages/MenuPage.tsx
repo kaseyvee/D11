@@ -1,10 +1,11 @@
-import MenuSection from "../components/menus/MenuSection";
-import PageHeader from "../components/menus/PageHeader";
-import MenuNav from "../components/menus/MenuNav";
-import DrinkSection from "../components/menus/drinks/DrinkSection";
+import MenuSection from "../components/menuPages/food/MenuSection";
+import PageHeader from "../components/menuPages/PageHeader";
+import MenuNav from "../components/menuPages/MenuNav";
+import DrinkSection from "../components/menuPages/drinks/DrinkSection";
 import { useContext } from "react";
 import { MenuContext } from "../App";
 import useScrollToTop from "../helpers/useScrollToTop";
+import DietTable from "../components/menuPages/food/DietTable";
 
 const MenuPage: React.FC = () => {
   useScrollToTop();
@@ -15,13 +16,14 @@ const MenuPage: React.FC = () => {
   return (
     <main className="menu-page page">
       <PageHeader
-        title="MENU"
+        title="ALL DAY MENU"
       />
       <MenuNav />
       {Object.keys(menu).length > 0 && <div className="menu-page_sections">
         {menu.adventurous.length > 0 && <MenuSection menuItems={menu.adventurous} />}
         {menu.authentic.length > 0 && <MenuSection menuItems={menu.authentic} />}
         {menu.desserts.length > 0 && <MenuSection menuItems={menu.desserts} />}
+        <DietTable />
       </div>}
       {Object.keys(drinks).length && <div className="menu-page_sections" id="drinks">
         <header className="menu-page_sections_drinks-header">
