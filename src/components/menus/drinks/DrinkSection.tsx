@@ -17,18 +17,19 @@ interface IProps {
     happyHour: boolean;
     alcoholContent?: number;
   }[]
+  happyHour?: boolean;
 }
 
-const DrinkSection: React.FC<IProps> = ({ drinkItems }) => {
+const DrinkSection: React.FC<IProps> = ({ drinkItems, happyHour }) => {
 
   const drinkType = drinkItems[0].type
 
   const drinkList = drinkItems.map(drinkItem => {
     if (drinkItem.type === "cocktail" || drinkItem.type === "non-alcoholic" || drinkItem.type === "shooter") {
-      return <GlassItem key={drinkItem.name} drinkItem={drinkItem} />
+      return <GlassItem key={drinkItem.name} happyHour={happyHour} drinkItem={drinkItem} />
     }
     if (drinkItem.type === "beer on tap") {
-      return <TapItem key={drinkItem.name} drinkItem={drinkItem} />
+      return <TapItem key={drinkItem.name} happyHour={happyHour} drinkItem={drinkItem} />
     }
     if (drinkItem.type === "bottled beer" || drinkItem.type === "soju" || drinkItem.type === "sake") {
       return <BottleItem key={drinkItem.name} drinkItem={drinkItem} />

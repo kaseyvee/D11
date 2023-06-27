@@ -22,9 +22,10 @@ interface IProps {
       price: number;
     }[];
   };
+  happyHour?: boolean;
 }
 
-const MenuItem: React.FC<IProps> = ({ menuItem }) => {
+const MenuItem: React.FC<IProps> = ({ menuItem, happyHour }) => {
   const itemVariations = menuItem.addOns?.map((variation) => {
     return (
       <div key={variation.name || variation.description} className="menu-item_variation">
@@ -60,7 +61,7 @@ const MenuItem: React.FC<IProps> = ({ menuItem }) => {
         </div>
 
         <div className="menu-item_main_price">
-          <span>{menuItem.price}</span>
+          <span>{happyHour ? menuItem.happyHourPrice : menuItem.price}</span>
         </div>
       </div>
 
