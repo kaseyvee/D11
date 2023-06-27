@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { client } from "../contentful";
+import getOrganizedDrinksMenu from "./getOrganizedDrinksMenu";
 
 export const useFetchDrinksMenu = () => {
   const [state, setState] = useState({});
@@ -9,19 +10,14 @@ export const useFetchDrinksMenu = () => {
       content_type: "drinks",
     })
       .then((res) => {
-        const filteredDrinks = res.items.map(drink => {
+        const drinks = res.items.map(drink => {
           return drink.fields;
         })
 
-        const categories = ["cocktail", "shooter", "beer on tap", "soju", "sake", "bottled beer", "non-alcoholic"];
-
-        const output: any = {};
-
-        for (let category of categories) {
-          output[category] = filteredDrinks.filter((drinkItem: any) => drinkItem.type.toLowerCase() === category);
-        }
+        const filteredDrinks = getOrganizedDrinksMenu(drinks);
+        // console.log(filteredDrinks/)
         
-        setState(output);
+        setState(filteredDrinks);
       })
     .catch((err) => {
       console.log(err)

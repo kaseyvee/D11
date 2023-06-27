@@ -6,11 +6,11 @@ const Homepage: React.FC = () => {
   
   return (
       
-    <div className="homepage">
+    <main className="homepage">
       <HomepageHero/>
       <HomepagePartners/>
       <HomepageStory/>
-    </div>
+    </main>
   );
 }
 

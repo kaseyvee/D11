@@ -15,9 +15,9 @@ const HomepageHero: React.FC = () => {
       <div className="wrapper">
         <div className="homepage-hero_content">
           <div className="homepage-hero_content_words">
-              <h3 className="homepage-hero_content_words_header">Late night.</h3>
-              <h3 className="homepage-hero_content_words_header">Asian-fusion.</h3>
-              <h3 className="homepage-hero_content_words_header">Snack bar.</h3>
+              <p className="homepage-hero_content_words_header">Late night.</p>
+              <p className="homepage-hero_content_words_header">Asian-fusion.</p>
+              <p className="homepage-hero_content_words_header">Snack bar.</p>
 
               <span className="homepage-hero_content_words_greeting">Mot Hai Ba, Dzo!</span>
           </div>

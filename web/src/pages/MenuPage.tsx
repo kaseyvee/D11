@@ -12,21 +12,26 @@ const MenuPage: React.FC = () => {
   console.log(drinks)
 
   return (
-    <div className="menu-page">
+    <main className="menu-page">
       <PageHeader
         title="MENU"
       />
       <MenuNav />
-      {Object.keys(menu).length && <div className="menu-page_sections">
-        {menu.adventurous.length && <MenuSection menuItems={menu.adventurous} />}
-        {menu.authentic.length && <MenuSection menuItems={menu.authentic} />}
-        {menu.desserts.length && <MenuSection menuItems={menu.desserts} />}
+      {Object.keys(menu).length > 0 && <div className="menu-page_sections">
+        {menu.adventurous.length > 0 && <MenuSection menuItems={menu.adventurous} />}
+        {menu.authentic.length > 0 && <MenuSection menuItems={menu.authentic} />}
+        {menu.desserts.length > 0 && <MenuSection menuItems={menu.desserts} />}
       </div>}
       {Object.keys(drinks).length && <div className="menu-page_sections">
-        {drinks.cocktail.length && <DrinkSection drinkItems={drinks.cocktail} />}
-        {drinks.cocktail.length && <DrinkSection drinkItems={drinks.cocktail} />}
+        <header className="menu-section_header">
+          <h2>Drinks</h2>
+          <span>đồ uống</span>
+        </header>
+        {drinks.cocktails.length > 0 && <DrinkSection drinkItems={drinks.cocktails} />}
+        {drinks.beerOnTap.length > 0 && <DrinkSection drinkItems={drinks.beerOnTap} />}
+        {drinks.nonAlcoholic.length > 0 && <DrinkSection drinkItems={drinks.nonAlcoholic} />}
       </div>}
-    </div>
+    </main>
   );
 }
 

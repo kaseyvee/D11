@@ -3,8 +3,11 @@ interface IProps {
     soldOut?: boolean;
     type: string;
     name: string;
+    brewery?: string;
     description?: string;
+    size?: number;
     priceByGlass: number;
+    priceByPitcher?: number;
     happyHourPrice?: number;
     takeOut: boolean;
     happyHour: boolean;
@@ -17,7 +20,8 @@ const GlassItem: React.FC<IProps> = ({ drinkItem }) => {
     <li className={`menu-item ${drinkItem.soldOut && `sold-out`}`}>
       <div className="menu-item_main">
         <div className="menu-item_main_words">
-          <h3>{drinkItem.name}</h3>
+          <header>{drinkItem.name}</header>
+          {drinkItem.alcoholContent && <span>{drinkItem.alcoholContent}oz</span>}
           <p>{drinkItem.description}</p>
         </div>
 

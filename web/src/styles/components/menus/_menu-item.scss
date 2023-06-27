@@ -12,7 +12,11 @@
         line-height: 1.3rem;
       }
 
-      h3, span {
+      header {
+        font-weight: 700;
+      }  
+
+      header, span {
         display: inline;
         margin-right: 0.5rem;
       }
@@ -45,7 +49,11 @@
     margin-left: 1rem;
 
     &_words {
-      span, h3, p {
+      header {
+        font-weight: 700;
+      }
+  
+      span, header, p {
         display: inline;
         margin-right: 0.5rem;
       }

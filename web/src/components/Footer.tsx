@@ -17,7 +17,7 @@ const Footer: React.FC = () => {
         <div className="footer_top">
           <div className="footer_top_info">
             <div className="footer_top_info_item">
-              <h1 className="footer_top_info_item_header">HOURS</h1>
+              <header className="footer_top_info_item_header">HOURS</header>
               <div className="footer_top_info_item_content">
                 <p><strong>Fri & Sat:</strong> 5 pm - 2 pm</p>
                 <p><strong>Tues, Wed, Thurs:</strong> 5 pm - 1 am</p>
@@ -26,13 +26,13 @@ const Footer: React.FC = () => {
               </div>
             </div>
             <div className="footer_top_info_item">
-              <h1 className="footer_top_info_item_header">LOCATION</h1>
+              <header className="footer_top_info_item_header">LOCATION</header>
               <div className="footer_top_info_item_content">
                 <p>4063 Main Street, Vancouver, BC</p>
               </div>
             </div>
             <div className="footer_top_info_item">
-              <h1 className="footer_top_info_item_header">CONTACT</h1>
+              <header className="footer_top_info_item_header">CONTACT</header>
               <div className="footer_top_info_item_content">
                 <a href="tel:6045662021">604.566.2021</a>
                 <a href="mailto: districteleven_@outlook.com">districteleven_@outlook.com</a>
