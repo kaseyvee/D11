@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import externalLinks from "../../helpers/externalLinks";
 import HeroButton from "../HeroButton";
 import background from "../../assets/background.jpg";
@@ -14,7 +15,13 @@ const HomepageHero: React.FC = () => {
       </div>
 
       <div className="wrapper">
-        <div className="homepage-hero_content">
+        <motion.div
+          className="homepage-hero_content"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8}}
+        >
           <h1 className="homepage-hero_content_words">
             <span className="homepage-hero_content_words_header">
               Late night.
@@ -39,7 +46,7 @@ const HomepageHero: React.FC = () => {
               children="BOOK A TABLE"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,19 +1,30 @@
 .page-header {
   @include montserrat(700);
   color: $white;
-  background: $blackFade, url('/D11/menu-bg.png');
-  background-attachment: fixed;
+  background: url('/D11/menu-bg.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 8rem 1rem;
+  padding: 6rem 1rem;
   position: relative;
+  z-index: 1;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $blackFade;
+    filter: brightness(0.3);
+    z-index: -1;
+  }
 
   &_title {
     font-size: 48px;
@@ -37,6 +48,7 @@
 
 @media (min-width: 768px) {
   .page-header {
+    background-attachment: fixed;
     padding-top: 10rem;
     padding-bottom: 6rem;
 

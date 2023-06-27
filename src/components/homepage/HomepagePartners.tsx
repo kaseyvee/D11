@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 import via from "../../assets/partner-via.svg";
 import complex from "../../assets/partner-complex.svg";
 import dished from "../../assets/partner-dished.svg";
@@ -8,7 +10,13 @@ const HomepagePartners: React.FC = () => {
   return (
     <section className="homepage-partners" id="partners">
       <div className="wrapper">
-        <div className="homepage-partners_left">
+        <motion.div
+          className="homepage-partners_left"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <p>As seen in:</p>
 
           <div className="homepage-partners_left_companies">
@@ -20,9 +28,15 @@ const HomepagePartners: React.FC = () => {
             <img src={narcity} alt="Narcity" />
             <img src={ot} alt="OpenTable Diners' Choice 2022" />
           </div>
-        </div>
+        </motion.div>
 
-        <div className="homepage-partners_right">
+        <motion.div
+          className="homepage-partners_right"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <p>
             <strong>Modern</strong> takes on Vietnamese classics.
           </p>
@@ -33,7 +47,7 @@ const HomepagePartners: React.FC = () => {
             <strong>Novel</strong> and <strong>experimental</strong>{" "}
             Asian-fusion dishes.
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
