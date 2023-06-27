@@ -1,21 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useMediaQuery } from "react-responsive";
 
 import NavItems from "./NavItems";
 
 const NavBar: React.FC = () => {
-  const [display, setDisplay] = useState(false);
-  const isDesktop = useMediaQuery({ query: '(min-width: 768px)' });
-
-  function handleMenuToggle() {
-    if (display) {
-      return setDisplay(false);
-    }
-    return setDisplay(true);
-  }
-
-  const scrollUpStyle = {
+    const scrollUpStyle = {
     animation: "scrollUp 500ms ease-in-out forwards",
     backgroundColor: "#1E1E1E",
   };
@@ -24,6 +13,26 @@ const NavBar: React.FC = () => {
   };
 
   const [scrollStyle, setScrollStyle] = useState<any>(scrollDownStyle);
+  const [display, setDisplay] = useState(false);
+
+  useEffect(() => {
+    addEventListener("resize", () => {
+      setDisplay(false);
+    })
+    
+    return () => {
+      removeEventListener("resize", () => {
+        setDisplay(false);
+      })
+    }
+  }, [])
+
+  function handleMenuToggle() {
+    if (display) {
+      return setDisplay(false);
+    }
+    return setDisplay(true);
+  }
 
   function handleScrollEffect() {
     const position = window.scrollY;
@@ -36,7 +45,7 @@ const NavBar: React.FC = () => {
   document.addEventListener("scroll", handleScrollEffect);
 
   return (
-    <nav className="navbar" style={isDesktop ? scrollStyle : {}}>
+    <nav className="navbar" style={!display ? scrollStyle : {}}>
       {display ? (
         <img
           src="menu-close-button.svg"
@@ -64,9 +73,9 @@ const NavBar: React.FC = () => {
         {display && (
           <motion.div
             className="navbar_overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, y: 72 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -72 }}
           >
             <div className="navbar_overlay_items">
               <img
