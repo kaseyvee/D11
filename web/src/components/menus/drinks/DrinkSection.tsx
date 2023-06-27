@@ -1,11 +1,12 @@
 import GlassItem from './GlassItem';
+import TapItem from './TapItem';
 
 interface IProps {
   drinkItems: {
-    soldOut: boolean;
+    soldOut?: boolean;
     type: string;
     name: string;
-    brewery: string;
+    brewery?: string;
     description?: string;
     size?: number;
     priceByGlass: number;
@@ -25,14 +26,19 @@ const DrinkSection: React.FC<IProps> = ({ drinkItems }) => {
   const drinkType = capitalizeFirstLetter(drinkItems[0].type)
 
   const drinkList = drinkItems.map(drinkItem => {
-    return <GlassItem key={drinkItem.name + drinkType} drinkItem={drinkItem} />
+    if (drinkItem.type === "cocktail" || drinkItem.type === "non-alcoholic") {
+      return <GlassItem key={drinkItem.name} drinkItem={drinkItem} />
+    }
+    if (drinkItem.type === "beer on tap") {
+      return <TapItem key={drinkItem.name} drinkItem={drinkItem} />
+    }
   })
 
   return (
     <section className="menu-section" id={drinkType.toLowerCase()}>
       <div className="wrapper">
         <header className="menu-section_header">
-          <h2>{drinkType}</h2>
+          <h3>{drinkType}</h3>
         </header>
         <ul className="menu-section_menu-items">
           {drinkList}
