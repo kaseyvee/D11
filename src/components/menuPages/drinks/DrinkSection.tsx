@@ -1,6 +1,6 @@
-import BottleItem from './BottleItem';
-import GlassItem from './GlassItem';
-import TapItem from './TapItem';
+import BottleItem from "./BottleItem";
+import GlassItem from "./GlassItem";
+import TapItem from "./TapItem";
 
 interface IProps {
   drinkItems: {
@@ -16,25 +16,44 @@ interface IProps {
     takeOut: boolean;
     happyHour: boolean;
     alcoholContent?: number;
-  }[]
+  }[];
   happyHour?: boolean;
 }
 
 const DrinkSection: React.FC<IProps> = ({ drinkItems, happyHour }) => {
+  const drinkType = drinkItems[0].type;
 
-  const drinkType = drinkItems[0].type
-
-  const drinkList = drinkItems.map(drinkItem => {
-    if (drinkItem.type === "cocktail" || drinkItem.type === "non-alcoholic" || drinkItem.type === "shooter") {
-      return <GlassItem key={drinkItem.name} happyHour={happyHour} drinkItem={drinkItem} />
+  const drinkList = drinkItems.map((drinkItem) => {
+    if (
+      drinkItem.type === "cocktail" ||
+      drinkItem.type === "non-alcoholic" ||
+      drinkItem.type === "shooter"
+    ) {
+      return (
+        <GlassItem
+          key={drinkItem.name}
+          happyHour={happyHour}
+          drinkItem={drinkItem}
+        />
+      );
     }
     if (drinkItem.type === "beer on tap") {
-      return <TapItem key={drinkItem.name} happyHour={happyHour} drinkItem={drinkItem} />
+      return (
+        <TapItem
+          key={drinkItem.name}
+          happyHour={happyHour}
+          drinkItem={drinkItem}
+        />
+      );
     }
-    if (drinkItem.type === "bottled beer" || drinkItem.type === "soju" || drinkItem.type === "sake") {
-      return <BottleItem key={drinkItem.name} drinkItem={drinkItem} />
+    if (
+      drinkItem.type === "bottled beer" ||
+      drinkItem.type === "soju" ||
+      drinkItem.type === "sake"
+    ) {
+      return <BottleItem key={drinkItem.name} drinkItem={drinkItem} />;
     }
-  })
+  });
 
   return (
     <section className="drink-section" id={drinkType.toLowerCase()}>
@@ -44,12 +63,10 @@ const DrinkSection: React.FC<IProps> = ({ drinkItems, happyHour }) => {
           {drinkType === "beer on tap" && <span>16oz</span>}
           {drinkType === "shooter" && <span>round of 4 shots</span>}
         </header>
-        <ul className="drink-section_drink-items">
-          {drinkList}
-        </ul>
+        <ul className="drink-section_drink-items">{drinkList}</ul>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default DrinkSection;

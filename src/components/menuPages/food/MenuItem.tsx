@@ -28,7 +28,10 @@ interface IProps {
 const MenuItem: React.FC<IProps> = ({ menuItem, happyHour }) => {
   const itemVariations = menuItem.addOns?.map((variation) => {
     return (
-      <div key={variation.name || variation.description} className="menu-item_variation">
+      <div
+        key={variation.name || variation.description}
+        className="menu-item_variation"
+      >
         <div className="menu-item_variation_words">
           <span>+</span>
           {variation.name && <header>{variation.name}</header>}
@@ -42,11 +45,15 @@ const MenuItem: React.FC<IProps> = ({ menuItem, happyHour }) => {
     );
   });
 
-  const diets = menuItem.dietRestrictions?.map(diet => {
+  const diets = menuItem.dietRestrictions?.map((diet) => {
     return (
-      <img key={menuItem.name + diet.dietaryType} src={diet.image} alt={`${diet.dietaryType}`} />
-    )
-  })
+      <img
+        key={menuItem.name + diet.dietaryType}
+        src={diet.image}
+        alt={`${diet.dietaryType}`}
+      />
+    );
+  });
 
   return (
     <li className={`menu-item ${menuItem.soldOut && `sold-out`}`}>
@@ -54,9 +61,9 @@ const MenuItem: React.FC<IProps> = ({ menuItem, happyHour }) => {
         <div className="menu-item_main_words">
           <header>{menuItem.name}</header>
           {menuItem.subHeading && <span>{menuItem.subHeading}</span>}
-          {menuItem.dietRestrictions.length > 0 && <div className="menu-item_main_words_diets">
-            {diets}
-          </div>}
+          {menuItem.dietRestrictions.length > 0 && (
+            <div className="menu-item_main_words_diets">{diets}</div>
+          )}
           <p>{menuItem.description}</p>
         </div>
 

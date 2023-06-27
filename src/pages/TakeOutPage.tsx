@@ -11,8 +11,7 @@ import DietTable from "../components/menuPages/food/DietTable";
 const TakeOutPage: React.FC = () => {
   useScrollToTop();
 
-  const { menu }: any = useContext(MenuContext);
-  const { drinks }: any = useContext(MenuContext);
+  const { menu, drinks }: any = useContext(MenuContext);
 
   const takeOutMenu = getMenuType(menu, "takeOut");
   const takeOutDrinksMenu = getMenuType(drinks, "takeOut");

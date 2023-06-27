@@ -1,9 +1,19 @@
 export default function getOrganizedDrinksMenu(drinks: any) {
-  const categories = ["cocktail", "shooter", "beer on tap", "soju", "sake", "bottled beer", "non-alcoholic"];
+  const categories = [
+    "cocktail",
+    "shooter",
+    "beer on tap",
+    "soju",
+    "sake",
+    "bottled beer",
+    "non-alcoholic",
+  ];
   const output: any = {};
 
   for (let category of categories) {
-    output[category] = drinks.filter((drinkItem: any) => drinkItem.type.toLowerCase() === category);
+    output[category] = drinks.filter(
+      (drinkItem: any) => drinkItem.type.toLowerCase() === category
+    );
   }
 
   const alphabetizedTaps = output["beer on tap"].sort((a: any, b: any) => {
@@ -18,7 +28,7 @@ export default function getOrganizedDrinksMenu(drinks: any) {
     }
 
     return 0;
-  })
+  });
 
   const filteredDrinks = {
     cocktails: output.cocktail,
@@ -27,8 +37,8 @@ export default function getOrganizedDrinksMenu(drinks: any) {
     soju: output.soju,
     sake: output.sake,
     bottledBeer: output["bottled beer"],
-    nonAlcoholic: output["non-alcoholic"]
-  }
+    nonAlcoholic: output["non-alcoholic"],
+  };
 
   return filteredDrinks;
 }

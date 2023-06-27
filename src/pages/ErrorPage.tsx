@@ -7,9 +7,7 @@ const ErrorPage: React.FC = () => {
       <div className="wrapper">
         <div className="homepage-hero_content">
           <h1 className="homepage-hero_content_words">
-            <span className="homepage-hero_content_words_header">
-              Giời ơi!
-            </span>
+            <span className="homepage-hero_content_words_header">Giời ơi!</span>
             <span className="homepage-hero_content_words_header">
               We couldn't find that. :(
             </span>

@@ -1,4 +1,4 @@
-import via from "../../assets/partner-via.svg"
+import via from "../../assets/partner-via.svg";
 import complex from "../../assets/partner-complex.svg";
 import dished from "../../assets/partner-dished.svg";
 import narcity from "../../assets/partner-narcity.svg";
@@ -30,8 +30,8 @@ const HomepagePartners: React.FC = () => {
             <strong>Elevated</strong> nods to Asian street foods.
           </p>
           <p>
-            <strong>Novel</strong> and <strong>experimental</strong> Asian-fusion
-            dishes.
+            <strong>Novel</strong> and <strong>experimental</strong>{" "}
+            Asian-fusion dishes.
           </p>
         </div>
       </div>

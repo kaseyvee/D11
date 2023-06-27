@@ -8,11 +8,11 @@ const Homepage: React.FC = () => {
 
   return (
     <main className="homepage page">
-      <HomepageHero/>
-      <HomepagePartners/>
-      <HomepageStory/>
+      <HomepageHero />
+      <HomepagePartners />
+      <HomepageStory />
     </main>
   );
-}
+};
 
 export default Homepage;

@@ -3,21 +3,29 @@ import HeroButton from "./HeroButton";
 import logo from "../assets/logo.svg";
 
 const Footer: React.FC = () => {
-
   return (
     <footer className="footer" id="footer">
       <div className="wrapper">
-
         <div className="footer_top">
           <div className="footer_top_info">
             <div className="footer_top_info_item">
               <header className="footer_top_info_item_header">HOURS</header>
               <div className="footer_top_info_item_content">
-                <p><strong>Mon:</strong> Closed</p>
-                <p><strong>Tues - Thurs:</strong> 5 pm - 1 am</p>
-                <p><strong>Fri:</strong> 5 pm - 2 am</p>
-                <p><strong>Sat:</strong> 11am - 3pm, 5 pm - 2 am</p>
-                <p><strong>Sun:</strong> 11am - 3pm, 5pm - 12am</p>
+                <p>
+                  <strong>Mon:</strong> Closed
+                </p>
+                <p>
+                  <strong>Tues - Thurs:</strong> 5 pm - 1 am
+                </p>
+                <p>
+                  <strong>Fri:</strong> 5 pm - 2 am
+                </p>
+                <p>
+                  <strong>Sat:</strong> 11am - 3pm, 5 pm - 2 am
+                </p>
+                <p>
+                  <strong>Sun:</strong> 11am - 3pm, 5pm - 12am
+                </p>
               </div>
             </div>
             <div className="footer_top_info_item">
@@ -30,7 +38,9 @@ const Footer: React.FC = () => {
               <header className="footer_top_info_item_header">CONTACT</header>
               <div className="footer_top_info_item_content">
                 <a href="tel:6045662021">604.566.2021</a>
-                <a href="mailto: districteleven_@outlook.com">districteleven_@outlook.com</a>
+                <a href="mailto: districteleven_@outlook.com">
+                  districteleven_@outlook.com
+                </a>
               </div>
             </div>
           </div>
@@ -43,10 +53,7 @@ const Footer: React.FC = () => {
 
         <div className="footer_bottom">
           <div>© 2021 District Eleven</div>
-          <img
-            src={logo}
-            className="footer_bottom_logo"
-          />
+          <img src={logo} className="footer_bottom_logo" />
           <div className="footer_bottom_socials">
             <HeroButton
               to={externalLinks.instagram}
@@ -62,10 +69,9 @@ const Footer: React.FC = () => {
             />
           </div>
         </div>
-        
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

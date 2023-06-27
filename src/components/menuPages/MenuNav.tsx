@@ -1,7 +1,6 @@
 import HeroButton from "../HeroButton";
 
 const MenuNav: React.FC = () => {
-
   return (
     <ul className="menu-nav">
       <li>
@@ -12,7 +11,7 @@ const MenuNav: React.FC = () => {
           className="menu-nav-button"
         />
       </li>
-      <li>  
+      <li>
         <HeroButton
           href="#authentic"
           color="white"
@@ -20,7 +19,7 @@ const MenuNav: React.FC = () => {
           className="menu-nav-button"
         />
       </li>
-      <li>  
+      <li>
         <HeroButton
           href="#desserts"
           color="white"
@@ -28,7 +27,7 @@ const MenuNav: React.FC = () => {
           className="menu-nav-button"
         />
       </li>
-      <li>  
+      <li>
         <HeroButton
           href="#drinks"
           color="white"
@@ -37,7 +36,7 @@ const MenuNav: React.FC = () => {
         />
       </li>
     </ul>
-  )
-}
+  );
+};
 
 export default MenuNav;

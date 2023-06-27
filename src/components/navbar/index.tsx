@@ -6,9 +6,8 @@ import logo from "../../assets/logo.svg";
 import open from "../../assets/menu-open-button.svg";
 import close from "../../assets/menu-close-button.svg";
 
-
 const NavBar: React.FC = () => {
-    const scrollUpStyle = {
+  const scrollUpStyle = {
     animation: "scrollUp 500ms ease-in-out forwards",
     backgroundColor: "#1E1E1E",
   };
@@ -22,14 +21,14 @@ const NavBar: React.FC = () => {
   useEffect(() => {
     addEventListener("resize", () => {
       setDisplay(false);
-    })
-    
+    });
+
     return () => {
       removeEventListener("resize", () => {
         setDisplay(false);
-      })
-    }
-  }, [])
+      });
+    };
+  }, []);
 
   function handleMenuToggle() {
     if (display) {
