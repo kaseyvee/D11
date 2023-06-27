@@ -41,7 +41,7 @@ const App: React.FC = () => {
   });
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/D11">
       <AnimatePresence>
         {loading ? (
           <Loading />
