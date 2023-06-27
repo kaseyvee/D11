@@ -7,12 +7,13 @@
   align-items: flex-end;
   
   position: sticky;
-  top: 0;
+  top: 60px;
+  padding-block: 1rem;
   z-index: 10;
 
   width: 100vw;
-  height: 120px;
-  background-color: rgba($black, 0.5);
+  // height: 120px;
+  background-color: $black;
 
   overflow: scroll;
   -ms-overflow-style: none;  /* IE and Edge */
