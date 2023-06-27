@@ -1,5 +1,5 @@
 import React from "react";
-import HeroButton from "../buttons/HeroButton";
+import HeroButton from "../HeroButton";
 import externalLinks from "../../helpers/externalLinks";
 
 interface IProps {

@@ -51,10 +51,10 @@ const NavBar: React.FC = () => {
       }
 
       <div className="navbar_main">
-        <h1 className="navbar_main_header">
+        <header className="navbar_main_header">
           <span className="navbar_main_header_district">DISTRICT</span>
           <span className="navbar_main_header_eleven">ELEVEN</span>
-        </h1>
+        </header>
         <NavItems />
       </div>
 

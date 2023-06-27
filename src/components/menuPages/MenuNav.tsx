@@ -1,4 +1,4 @@
-import HeroButton from "../buttons/HeroButton";
+import HeroButton from "../HeroButton";
 
 const MenuNav: React.FC = () => {
 

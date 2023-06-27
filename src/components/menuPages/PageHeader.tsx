@@ -1,4 +1,4 @@
-import HeroButton from "../buttons/HeroButton";
+import HeroButton from "../HeroButton";
 
 interface IProps {
   title: string;
@@ -21,10 +21,10 @@ const PageHeader: React.FC<IProps> = (props: IProps) => {
           children="TAKE-OUT MENU"
           className="page-header-button"
         />}
-        {props.title !== "MENU" && <HeroButton
+        {props.title !== "ALL DAY MENU" && <HeroButton
           to="/menu"
           color="white"
-          children="DINNER MENU"
+          children="ALL DAY MENU"
           className="page-header-button"
         />}
       </div>

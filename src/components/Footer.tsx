@@ -1,6 +1,6 @@
 import React from "react";
 import externalLinks from "../helpers/externalLinks";
-import HeroButton from "./buttons/HeroButton";
+import HeroButton from "./HeroButton";
 
 // does cody want to be able to change hours/contact?
 // TODO:

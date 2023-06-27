@@ -1,9 +1,9 @@
 to do:
 - create diet description component
-- error page
 - optimize assets
 - get better restaurant/food photos
 - make better diet icons
+- ~~error page~~
 
 stretch:
 - make hours, contacts, and external links manageable through contentful

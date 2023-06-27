@@ -1,7 +1,7 @@
-import MenuSection from "../components/menus/MenuSection";
-import PageHeader from "../components/menus/PageHeader";
-import MenuNav from "../components/menus/MenuNav";
-import DrinkSection from "../components/menus/drinks/DrinkSection";
+import MenuSection from "../components/menuPages/food/MenuSection";
+import PageHeader from "../components/menuPages/PageHeader";
+import MenuNav from "../components/menuPages/MenuNav";
+import DrinkSection from "../components/menuPages/drinks/DrinkSection";
 import { useContext } from "react";
 import { MenuContext } from "../App";
 import useScrollToTop from "../helpers/useScrollToTop";
@@ -15,7 +15,7 @@ const MenuPage: React.FC = () => {
   return (
     <main className="menu-page page">
       <PageHeader
-        title="MENU"
+        title="ALL DAY MENU"
       />
       <MenuNav />
       {Object.keys(menu).length > 0 && <div className="menu-page_sections">
