@@ -34,7 +34,18 @@
         }
 
         &_content {
+          display: flex;
+          flex-direction: column;
           color: $white;
+
+          a {
+            color: $white;
+
+            &:hover {
+              color: $yellow;
+              transition-duration: 200ms;
+            }
+          }
         }
       }
     }

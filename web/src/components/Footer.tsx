@@ -34,8 +34,8 @@ const Footer: React.FC = () => {
             <div className="footer_top_info_item">
               <h1 className="footer_top_info_item_header">CONTACT</h1>
               <div className="footer_top_info_item_content">
-                <p>604.566.2021</p>
-                <p>districteleven_@outlook.com</p>
+                <a href="tel:6045662021">604.566.2021</a>
+                <a href="mailto: districteleven_@outlook.com">districteleven_@outlook.com</a>
               </div>
             </div>
           </div>
