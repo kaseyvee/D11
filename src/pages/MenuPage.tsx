@@ -8,7 +8,7 @@ import useScrollToTop from "../helpers/useScrollToTop";
 import DietTable from "../components/menuPages/food/DietTable";
 
 const MenuPage: React.FC = () => {
-  // useScrollToTop();
+  useScrollToTop();
 
   const { menu }: any = useContext(MenuContext);
   const { drinks }: any = useContext(MenuContext);

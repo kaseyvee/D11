@@ -1,7 +1,7 @@
 to do:
 - optimize assets
 - get better restaurant/food photos
-- make better diet icons
+- ~~make better diet icons~~
 - ~~create diet description component~~
 - ~~error page~~
 
