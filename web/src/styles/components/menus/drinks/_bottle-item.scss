@@ -1,12 +1,9 @@
-.tap-item {
+.bottle-item {
   &_main {
     display: flex;
     justify-content: space-between;
 
     &_words {
-      &_brewery {
-        font-weight: 700;
-      }
 
       &_alcohol-content {
         font-style: italic;

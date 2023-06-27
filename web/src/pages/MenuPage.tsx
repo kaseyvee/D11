@@ -29,6 +29,9 @@ const MenuPage: React.FC = () => {
         </header>
         {drinks.cocktails.length > 0 && <DrinkSection drinkItems={drinks.cocktails} />}
         {drinks.beerOnTap.length > 0 && <DrinkSection drinkItems={drinks.beerOnTap} />}
+        {drinks.bottledBeer.length > 0 && <DrinkSection drinkItems={drinks.bottledBeer} />}
+        {drinks.soju.length > 0 && <DrinkSection drinkItems={drinks.soju} />}
+        {drinks.sake.length > 0 && <DrinkSection drinkItems={drinks.sake} />}
         {drinks.nonAlcoholic.length > 0 && <DrinkSection drinkItems={drinks.nonAlcoholic} />}
       </div>}
     </main>

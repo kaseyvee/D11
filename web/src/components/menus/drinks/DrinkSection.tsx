@@ -1,3 +1,4 @@
+import BottleItem from './BottleItem';
 import GlassItem from './GlassItem';
 import TapItem from './TapItem';
 
@@ -20,10 +21,7 @@ interface IProps {
 
 const DrinkSection: React.FC<IProps> = ({ drinkItems }) => {
 
-  function capitalizeFirstLetter(word: string) {
-    return word.charAt(0).toUpperCase() + word.slice(1);
-  }
-  const drinkType = capitalizeFirstLetter(drinkItems[0].type)
+  const drinkType = drinkItems[0].type
 
   const drinkList = drinkItems.map(drinkItem => {
     if (drinkItem.type === "cocktail" || drinkItem.type === "non-alcoholic") {
@@ -32,15 +30,19 @@ const DrinkSection: React.FC<IProps> = ({ drinkItems }) => {
     if (drinkItem.type === "beer on tap") {
       return <TapItem key={drinkItem.name} drinkItem={drinkItem} />
     }
+    if (drinkItem.type === "bottled beer" || drinkItem.type === "soju" || drinkItem.type === "sake") {
+      return <BottleItem key={drinkItem.name} drinkItem={drinkItem} />
+    }
   })
 
   return (
-    <section className="menu-section" id={drinkType.toLowerCase()}>
+    <section className="drink-section" id={drinkType.toLowerCase()}>
       <div className="wrapper">
-        <header className="menu-section_header">
+        <header className="drink-section_header">
           <h3>{drinkType}</h3>
+          {drinkType === "beer on tap" && <span>16oz</span>}
         </header>
-        <ul className="menu-section_menu-items">
+        <ul className="drink-section_drink-items">
           {drinkList}
         </ul>
       </div>

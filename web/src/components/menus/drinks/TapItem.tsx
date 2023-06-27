@@ -20,8 +20,9 @@ const TapItem: React.FC<IProps> = ({ drinkItem }) => {
     <li className={`tap-item ${drinkItem.soldOut && `sold-out`}`}>
       <div className="tap-item_main">
         <div className="tap-item_main_words">
-          <span>{drinkItem.brewery}</span>
+          <span className="tap-item_main_words_brewery">{drinkItem.brewery}</span>
           <span> {drinkItem.name}</span>
+          <span className="tap-item_main_words_alcohol-content"> {drinkItem.alcoholContent}%</span>
         </div>
 
         <div className="tap-item_main_price">
