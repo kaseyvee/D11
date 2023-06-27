@@ -3,6 +3,12 @@ to do:
 - get better restaurant/food photos
 - change drink category names
 - check if vietnamese categories are correct lol
+- optimize accessibility
+- fix background-attachment for mobile
+- fix hero on mobile (change vh to dvh probably)
+- fix favicon
+- change document title on each page
+- add background image to error page
 - ~~make better diet icons~~
 - ~~create diet description component~~
 - ~~error page~~
