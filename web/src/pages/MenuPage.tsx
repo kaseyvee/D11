@@ -22,12 +22,13 @@ const MenuPage: React.FC = () => {
         {menu.authentic.length > 0 && <MenuSection menuItems={menu.authentic} />}
         {menu.desserts.length > 0 && <MenuSection menuItems={menu.desserts} />}
       </div>}
-      {Object.keys(drinks).length && <div className="menu-page_sections">
-        <header className="menu-section_header">
+      {Object.keys(drinks).length && <div className="menu-page_sections" id="drinks">
+        <header className="menu-page_sections_drinks-header">
           <h2>Drinks</h2>
           <span>đồ uống</span>
         </header>
         {drinks.cocktails.length > 0 && <DrinkSection drinkItems={drinks.cocktails} />}
+        {drinks.shooters.length > 0 && <DrinkSection drinkItems={drinks.shooters} />}
         {drinks.beerOnTap.length > 0 && <DrinkSection drinkItems={drinks.beerOnTap} />}
         {drinks.bottledBeer.length > 0 && <DrinkSection drinkItems={drinks.bottledBeer} />}
         {drinks.soju.length > 0 && <DrinkSection drinkItems={drinks.soju} />}

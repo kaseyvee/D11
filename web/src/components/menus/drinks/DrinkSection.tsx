@@ -24,7 +24,7 @@ const DrinkSection: React.FC<IProps> = ({ drinkItems }) => {
   const drinkType = drinkItems[0].type
 
   const drinkList = drinkItems.map(drinkItem => {
-    if (drinkItem.type === "cocktail" || drinkItem.type === "non-alcoholic") {
+    if (drinkItem.type === "cocktail" || drinkItem.type === "non-alcoholic" || drinkItem.type === "shooter") {
       return <GlassItem key={drinkItem.name} drinkItem={drinkItem} />
     }
     if (drinkItem.type === "beer on tap") {
@@ -41,6 +41,7 @@ const DrinkSection: React.FC<IProps> = ({ drinkItems }) => {
         <header className="drink-section_header">
           <h3>{drinkType}</h3>
           {drinkType === "beer on tap" && <span>16oz</span>}
+          {drinkType === "shooter" && <span>round of 4 shots</span>}
         </header>
         <ul className="drink-section_drink-items">
           {drinkList}

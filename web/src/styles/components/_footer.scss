@@ -41,7 +41,7 @@
           a {
             color: $white;
 
-            &:hover {
+            &:hover, &:focus {
               color: $yellow;
               transition-duration: 200ms;
             }

@@ -4,12 +4,13 @@ import externalLinks from "../../helpers/externalLinks";
 
 interface IProps {
   style?: {animation: string};
+  onClick?: () => void;
 }
 
 const NavItems: React.FC<IProps> = (props: IProps) => {
 
   return (
-    <ul className="nav-items" style={props.style}>
+    <ul className="nav-items" style={props.style} onClick={props.onClick}>
       <li>  
         <HeroButton
           to="/"

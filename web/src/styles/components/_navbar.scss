@@ -96,13 +96,13 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-4rem)
+    transform: translateY(-4.5rem)
   }
 }
 
 @keyframes scrollDown {
   0% {
-    transform: translateY(-4rem);
+    transform: translateY(-4.5rem);
   }
   100% {
     transform: translateY(0)

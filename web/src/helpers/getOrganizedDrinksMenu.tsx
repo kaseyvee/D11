@@ -22,7 +22,7 @@ export default function getOrganizedDrinksMenu(drinks: any) {
 
   const filteredDrinks = {
     cocktails: output.cocktail,
-    shooters: output.shooters,
+    shooters: output.shooter,
     beerOnTap: alphabetizedTaps,
     soju: output.soju,
     sake: output.sake,

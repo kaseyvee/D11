@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavItems from "./NavItems";
 
 const NavBar: React.FC = () => {
@@ -65,7 +65,7 @@ const NavBar: React.FC = () => {
             alt="district eleven logo"
             className="navbar_overlay_items_logo"
           />
-          <NavItems />
+          <NavItems onClick={() => setDisplay(false)} />
         </div>
       </div>}
     </nav>
