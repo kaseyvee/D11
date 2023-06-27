@@ -13,13 +13,14 @@ const NavBar: React.FC = () => {
   }
   
   const scrollUpStyle = {
-    animation: "scrollUp 500ms ease-in-out forwards"
+    animation: "scrollUp 500ms ease-in-out forwards",
+    backgroundColor: "#1E1E1E"
   };
   const scrollDownStyle = {
-    animation: "scrollDown 500ms ease-in-out forwards"
+    animation: "scrollDown 500ms ease-in-out forwards",
   };
 
-  const [scrollStyle, setScrollStyle] = useState(scrollDownStyle);
+  const [scrollStyle, setScrollStyle] = useState<any>(scrollDownStyle);
 
   function handleScrollEffect() {
     const position = window.scrollY;
@@ -32,7 +33,7 @@ const NavBar: React.FC = () => {
   document.addEventListener("scroll", handleScrollEffect);
 
   return (
-    <div className="navbar">
+    <nav className="navbar" style={scrollStyle}>
       {display ?
         <img
           src="menu-close-button.svg"
@@ -50,11 +51,11 @@ const NavBar: React.FC = () => {
       }
 
       <div className="navbar_main">
-        <div className="navbar_main_header" style={scrollStyle}>
+        <div className="navbar_main_header">
           <span className="navbar_main_header_district">DISTRICT</span>
           <span className="navbar_main_header_eleven">ELEVEN</span>
         </div>
-        <NavItems style={scrollStyle} />
+        <NavItems />
       </div>
 
       {display && <div className="navbar_overlay">
@@ -67,7 +68,7 @@ const NavBar: React.FC = () => {
           <NavItems />
         </div>
       </div>}
-    </div>
+    </nav>
   );
 }
 

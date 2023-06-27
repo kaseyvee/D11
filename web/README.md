@@ -1,3 +1,9 @@
-web (vite) - node 16.18.0
-- npm run dev
+to do:
+- create diet description component
+- optimize assets
+- get better restaurant/food photos
+- make better diet icons
 
+stretch:
+- make hours, contacts, and external links manageable through contentful
+- implement 3rd party map in footer

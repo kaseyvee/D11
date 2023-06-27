@@ -1,0 +1,33 @@
+.menu-page_sections {
+  position: relative;
+}
+
+.menu-nav {
+  display: flex;
+  align-items: flex-end;
+  
+  position: sticky;
+  top: 60px;
+  padding-block: 1rem;
+  z-index: 10;
+
+  width: 100vw;
+  // height: 120px;
+  background-color: $black;
+
+  overflow: scroll;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+
+  &::-webkit-scrollbar {
+    display: none; /* Chrome */
+  }
+
+  @media (min-width: 508px) {
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    gap: 3rem;
+  }
+}
