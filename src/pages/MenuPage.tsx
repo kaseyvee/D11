@@ -2,7 +2,7 @@ import MenuSection from "../components/menuPages/food/MenuSection";
 import PageHeader from "../components/menuPages/PageHeader";
 import MenuNav from "../components/menuPages/MenuNav";
 import DrinkSection from "../components/menuPages/drinks/DrinkSection";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { MenuContext } from "../App";
 import useScrollToTop from "../helpers/useScrollToTop";
 import DietTable from "../components/menuPages/food/DietTable";
@@ -11,6 +11,10 @@ const MenuPage: React.FC = () => {
   useScrollToTop();
 
   const { menu, drinks }: any = useContext(MenuContext);
+
+  useEffect(() => {
+    document.title = "Menu | District Eleven";
+  }, []);
 
   return (
     <main className="menu-page page">

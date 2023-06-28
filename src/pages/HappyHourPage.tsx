@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { MenuContext } from "../App";
 import DrinkSection from "../components/menuPages/drinks/DrinkSection";
 import MenuNav from "../components/menuPages/MenuNav";
@@ -15,6 +15,10 @@ const HappyHourPage: React.FC = () => {
 
   const happyHourMenu = getMenuType(menu, "happyHour");
   const happyHourDrinksMenu = getMenuType(drinks, "happyHour");
+
+  useEffect(() => {
+    document.title = "Happy Hour | District Eleven";
+  }, []);
 
   return (
     <main className="happy-hour-page page">

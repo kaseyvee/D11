@@ -19,15 +19,23 @@ const HomepagePartners: React.FC = () => {
         >
           <p>As seen in:</p>
 
-          <div className="homepage-partners_left_companies">
+          <ul className="homepage-partners_left_companies">
             <li>
               <img src={via} alt="Vancouver Is Awesome" />
             </li>
-            <img src={complex} alt="Complex" />
-            <img src={dished} alt="Dished" />
-            <img src={narcity} alt="Narcity" />
-            <img src={ot} alt="OpenTable Diners' Choice 2022" />
-          </div>
+            <li>
+              <img src={complex} alt="Complex" />
+            </li>
+            <li>
+              <img src={dished} alt="Dished" />
+            </li>
+            <li>
+              <img src={narcity} alt="Narcity" />
+            </li>
+            <li>
+              <img src={ot} alt="OpenTable Diners' Choice 2022" />
+            </li>
+          </ul>
         </motion.div>
 
         <motion.div

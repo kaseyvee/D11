@@ -49,21 +49,14 @@ const NavBar: React.FC = () => {
 
   return (
     <nav className="navbar" style={!display ? scrollStyle : {}}>
-      {display ? (
-        <img
-          src={close}
-          alt="exit menu"
-          className="navbar_menu-close"
-          onClick={handleMenuToggle}
-        />
-      ) : (
-        <img
-          src={open}
-          alt="open menu"
-          className="navbar_menu-open"
-          onClick={handleMenuToggle}
-        />
-      )}
+      <button
+        onClick={handleMenuToggle}
+        className={`navbar_menu-${display ? "close" : "open"}`}
+        aria-expanded={display ? "true" : "false"}
+        aria-label="mobile menu navigation"
+      >
+        <img src={display ? close : open} alt="" />
+      </button>
 
       <div className="navbar_main">
         <header className="navbar_main_header">

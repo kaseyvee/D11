@@ -7,7 +7,7 @@ interface IProps {
 const PageHeader: React.FC<IProps> = (props: IProps) => {
   return (
     <div className="page-header">
-      <h2 className="page-header_title">{props.title}</h2>
+      <h1 className="page-header_title">{props.title}</h1>
       <div className="page-header_buttons">
         {props.title !== "HAPPY HOUR MENU" && (
           <HeroButton
