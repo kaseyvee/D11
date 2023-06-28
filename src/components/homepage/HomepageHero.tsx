@@ -8,7 +8,7 @@ import hero from "../../assets/hero.webp";
 const HomepageHero: React.FC = () => {
   return (
     <section className="homepage-hero">
-      <div className="homepage-hero_background">
+      {/* <div className="homepage-hero_background">
         <motion.img
           src={hero}
           alt=""
@@ -18,7 +18,7 @@ const HomepageHero: React.FC = () => {
           viewport={{ once: true }}
           transition={{duration: 0.8}}
         />
-      </div>
+      </div> */}
 
       <div className="wrapper">
         <motion.div
