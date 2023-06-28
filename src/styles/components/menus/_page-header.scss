@@ -40,6 +40,8 @@
 
 @media (min-width: 508px) {
   .page-header {
+    background-position-y: 95%;
+
     &_menu-sections {
       justify-content: center;
     }
@@ -49,7 +51,7 @@
 @media (min-width: 768px) {
   .page-header {
     background-attachment: fixed;
-    background-position-y: 45%;
+    background-position-y: 95%;
     padding-top: 10rem;
     padding-bottom: 6rem;
     min-height: unset;
