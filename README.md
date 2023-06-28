@@ -14,6 +14,7 @@ to do:
 - ~~error page~~
 
 stretch:
+- refactor fetching logic to use single API call for all contentful entries
 - make hours, contacts, and external links manageable through contentful
 - implement 3rd party map in footer
 - refactor menu pages dizasta town
