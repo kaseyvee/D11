@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
-import via from "../../assets/partner-via.svg";
-import complex from "../../assets/partner-complex.svg";
-import dished from "../../assets/partner-dished.svg";
-import narcity from "../../assets/partner-narcity.svg";
-import ot from "../../assets/partner-ot.svg";
+import via from "../../assets/partners/partner-via.svg";
+import complex from "../../assets/partners/partner-complex.svg";
+import dished from "../../assets/partners/partner-dished.svg";
+import narcity from "../../assets/partners/partner-narcity.svg";
+import ot from "../../assets/partners/partner-ot.svg";
 
 const HomepagePartners: React.FC = () => {
   return (

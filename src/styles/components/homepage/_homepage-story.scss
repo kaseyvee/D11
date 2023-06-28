@@ -16,7 +16,6 @@
   }
 
   &_first {
-    
     &_highlight {
       white-space: nowrap;
       @include montserrat(700);
@@ -34,21 +33,18 @@
       }
     }
   }
-}
 
-@media (min-width: 769px) {
-  .homepage-story {
+  @media (min-width: 769px) {
     padding-bottom: 10rem;
 
-    &_first, &_second {
+    &_first,
+    &_second {
       max-width: 50rem;
       font-size: 36px;
     }
 
     &_first {
-
       &_highlight {
-  
         &::before {
           transform: translate(-0.25rem, 1rem);
           width: 17rem;

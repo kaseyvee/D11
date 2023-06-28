@@ -1,81 +1,62 @@
 .homepage-hero {
-    display: flex;
-    height: 100dvh;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding-inline: 2rem;
-    background: url("/D11/hero.webp") center no-repeat;
-    background-size: cover;
-    position: relative;
-    z-index: 1;
+  display: flex;
+  height: 100dvh;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-inline: 2rem;
+  background: url("/D11/hero.webp") center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
 
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: $black;
-        opacity: 0.6;
-        z-index: -1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: $black;
+    opacity: 0.6;
+    z-index: -1;
+  }
+
+  &_content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    &_words {
+      display: flex;
+      flex-direction: column;
+      font-size: 42px;
+
+      &_header {
+        @include montserrat(700);
+        color: #fffcf5;
       }
-    
-    // &_background {
-    //     z-index: -1;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-        
-    //     &_img {
-    //         height: 100%;
-    //         width: 100%;
-    //         object-fit: cover;
-    //     }
-    // }
+
+      &_greeting {
+        @include montserrat(100);
+        color: #fffcf5;
+        font-style: italic;
+      }
+    }
+
+    &_buttons {
+      display: flex;
+      gap: 25px;
+    }
+  }
+
+  @media (min-width: 769px) {
+    background-attachment: fixed;
 
     &_content {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 1rem;
-
-        &_words {
-            display: flex;
-            flex-direction: column;
-            font-size: 42px;
-            // overflow-wrap: break-word;
-
-            &_header {
-                @include montserrat(700);
-                color: #FFFCF5;
-            }
-    
-            &_greeting {
-                @include montserrat(100);
-                color: #FFFCF5;
-                font-style: italic;
-            }
-        }
-
-        &_buttons {
-            display: flex;
-            gap: 25px;
-        }
+      &_words {
+        font-size: 50px;
+      }
     }
-}
-
-@media (min-width: 769px) {
-    .homepage-hero {
-        background-attachment: fixed;
-
-        &_content {
-
-            &_words {
-                font-size: 50px;
-            }
-        }
-    }
+  }
 }

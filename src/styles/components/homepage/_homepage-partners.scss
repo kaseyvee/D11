@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
-  
+
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    
+
     &_companies {
       display: flex;
       flex-direction: column;
@@ -31,7 +31,7 @@
       li {
         display: flex;
         justify-content: center;
-        
+
         img {
           mix-blend-mode: multiply;
         }
@@ -46,10 +46,8 @@
     justify-content: center;
     gap: 3rem;
   }
-}
 
-@media (min-width: 769px) {
-  .homepage-partners {
+  @media (min-width: 769px) {
     padding-top: 10rem;
 
     .wrapper {
@@ -57,13 +55,13 @@
       gap: 2rem;
     }
 
-    &_left, &_right {
+    &_left,
+    &_right {
       max-width: 40rem;
       height: fit-content;
     }
 
     &_left {
-
       &_companies {
         flex-direction: row;
         flex-wrap: wrap;

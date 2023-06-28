@@ -1,12 +1,12 @@
 .navbar {
-  // background-color: red;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
   transition-duration: 200ms;
 
-  &_menu-open, &_menu-close {
+  &_menu-open,
+  &_menu-close {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,17 +19,16 @@
 
   &_main {
     background: $blackFade;
-    
+
     &_header {
       color: $white;
       display: none;
       letter-spacing: 10px;
       font-size: 32px;
       margin-top: 2rem;
-      
+
       &_district {
         @include montserrat(700);
-        
       }
       &_eleven {
         @include montserrat(500);
@@ -40,7 +39,7 @@
       display: none;
     }
   }
-  
+
   &_overlay {
     position: absolute;
     top: 0;
@@ -64,11 +63,10 @@
       }
     }
   }
-}
 
-@media (min-width: 769px) {
-  .navbar {
-    &_menu-open, &_menu-close {
+  @media (min-width: 769px) {
+    &_menu-open,
+    &_menu-close {
       display: none !important;
     }
 
@@ -98,7 +96,7 @@
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-4.5rem)
+    transform: translateY(-4.5rem);
   }
 }
 
@@ -107,6 +105,6 @@
     transform: translateY(-4.5rem);
   }
   100% {
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
