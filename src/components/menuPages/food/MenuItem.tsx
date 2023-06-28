@@ -51,6 +51,8 @@ const MenuItem: React.FC<IProps> = ({ menuItem, happyHour }) => {
         key={menuItem.name + diet.dietaryType}
         src={diet.image}
         alt={`${diet.dietaryType}`}
+        width={16}
+        height={16}
       />
     );
   });

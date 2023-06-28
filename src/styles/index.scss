@@ -6,30 +6,30 @@
 @import "pages";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
+  height: 100%;
+  scroll-behavior: smooth;
+
+  body {
+    @include montserrat;
     height: 100%;
-    scroll-behavior: smooth;
+    background-color: $black;
 
-    body {
-        @include montserrat;
-        height: 100%;
-        background-color: $black;
-        
-        #root {
-            height: 100%;
-            
-            li {
-                list-style-type: none;
-            }
+    #root {
+      height: 100%;
 
-            a {
-                text-decoration: none;
-            }
-        }
+      li {
+        list-style-type: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
     }
+  }
 }
