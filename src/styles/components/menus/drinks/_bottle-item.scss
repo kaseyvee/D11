@@ -5,6 +5,10 @@
 
     &_words {
 
+      &_name {
+        font-weight: 700;
+      }
+
       &_alcohol-content {
         font-style: italic;
         color: $yellow;
