@@ -78,6 +78,8 @@ const NavBar: React.FC = () => {
                 src={logo}
                 alt="district eleven logo"
                 className="navbar_overlay_items_logo"
+                width={62}
+                height={62}
               />
               <NavItems onClick={() => setDisplay(false)} />
             </div>

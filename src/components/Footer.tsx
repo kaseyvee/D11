@@ -1,6 +1,9 @@
 import externalLinks from "../helpers/externalLinks";
 import HeroButton from "./HeroButton";
 import logo from "../assets/logo.svg";
+import mobileMap from "../assets/map-mobile.webp";
+import tabletMap from "../assets/map-tablet.webp";
+import desktopMap from "../assets/map-desktop.webp";
 
 const Footer: React.FC = () => {
   return (
@@ -37,7 +40,9 @@ const Footer: React.FC = () => {
             <div className="footer_top_info_item">
               <header className="footer_top_info_item_header">CONTACT</header>
               <div className="footer_top_info_item_content">
-                <a href="tel:6045662021" aria-label="6 0 4. 5 6 6. 2 0 2 1.">604.566.2021</a>
+                <a href="tel:6045662021" aria-label="6 0 4. 5 6 6. 2 0 2 1.">
+                  604.566.2021
+                </a>
                 <a href="mailto: districteleven_@outlook.com">
                   districteleven_@outlook.com
                 </a>
@@ -54,7 +59,13 @@ const Footer: React.FC = () => {
 
         <div className="footer_bottom">
           <div>© 2021 District Eleven</div>
-          <img src={logo} alt="" className="footer_bottom_logo" />
+          <img
+            src={logo}
+            alt=""
+            className="footer_bottom_logo"
+            width={62}
+            height={62}
+          />
           <div className="footer_bottom_socials">
             <HeroButton
               to={externalLinks.instagram}

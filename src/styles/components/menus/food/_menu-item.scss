@@ -5,7 +5,6 @@
     gap: 1rem;
 
     &_words {
-      // color: $white;
 
       p {
         font-style: italic;
@@ -65,6 +64,12 @@
 
     &_price {
       font-style: italic;
+    }
+  }
+
+  @media (min-width: 769px) {
+    &_main {
+      gap: 2rem;
     }
   }
 }
