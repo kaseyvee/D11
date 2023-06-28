@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
+
 import externalLinks from "../../helpers/externalLinks";
+
 import HeroButton from "../HeroButton";
-import background from "../../assets/background.jpg";
+import hero from "../../assets/hero.jpg";
 
 const HomepageHero: React.FC = () => {
   return (
     <section className="homepage-hero">
       <div className="homepage-hero_background">
         <img
-          src={background}
+          src={hero}
           alt="background"
           className="homepage-hero_background_img"
         />

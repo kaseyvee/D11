@@ -1,11 +1,30 @@
-import HeroButton from "../components/HeroButton";
+import { motion } from "framer-motion";
+
 import externalLinks from "../helpers/externalLinks";
+
+import HeroButton from "../components/HeroButton";
+
+import error from "../assets/error.jpg";
 
 const ErrorPage: React.FC = () => {
   return (
     <main className="homepage-hero">
       <div className="wrapper">
-        <div className="homepage-hero_content">
+        <div className="homepage-hero_background">
+          <img
+            src={error}
+            alt="background"
+            className="homepage-hero_background_img"
+          />
+        </div>
+
+        <motion.div
+          className="homepage-hero_content"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <h1 className="homepage-hero_content_words">
             <span className="homepage-hero_content_words_header">Giời ơi!</span>
             <span className="homepage-hero_content_words_header">
@@ -25,7 +44,7 @@ const ErrorPage: React.FC = () => {
               children="BOOK A TABLE"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </main>
   );

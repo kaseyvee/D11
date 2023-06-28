@@ -1,8 +1,8 @@
 .page-header {
   @include montserrat(700);
   color: $white;
-  background: url('/D11/menu-bg.png');
-  background-position: center;
+  background: url('/D11/menu-bg.jpg');
+  // background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 6rem 1rem;
@@ -49,6 +49,7 @@
 @media (min-width: 768px) {
   .page-header {
     background-attachment: fixed;
+    background-position-y: 45%;
     padding-top: 10rem;
     padding-bottom: 6rem;
 
