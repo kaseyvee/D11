@@ -1,9 +1,6 @@
 import externalLinks from "../helpers/externalLinks";
 import HeroButton from "./HeroButton";
-import logo from "../assets/logo.svg";
-import mobileMap from "../assets/map-mobile.webp";
-import tabletMap from "../assets/map-tablet.webp";
-import desktopMap from "../assets/map-desktop.webp";
+import Logo from "../assets/logo.svg";
 
 const Footer: React.FC = () => {
   return (
@@ -60,7 +57,7 @@ const Footer: React.FC = () => {
         <div className="footer_bottom">
           <div>© 2021 District Eleven</div>
           <img
-            src={logo}
+            src={Logo}
             alt=""
             className="footer_bottom_logo"
             width={62}

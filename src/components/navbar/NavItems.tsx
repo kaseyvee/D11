@@ -1,8 +1,8 @@
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import HeroButton from "../HeroButton";
 import externalLinks from "../../helpers/externalLinks";
+import HeroButton from "../HeroButton";
 
 interface IProps {
   style?: { animation: string };

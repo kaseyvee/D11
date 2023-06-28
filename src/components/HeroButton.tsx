@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
-import classNames from "classnames";
 import { Link, LinkProps } from "react-router-dom";
+import classNames from "classnames";
 
 export type HeroButtonType =
   | LinkProps

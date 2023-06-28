@@ -1,7 +1,5 @@
 import { motion } from "framer-motion";
-
 import externalLinks from "../../helpers/externalLinks";
-
 import HeroButton from "../HeroButton";
 
 const HomepageHero: React.FC = () => {

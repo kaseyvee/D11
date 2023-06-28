@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import NavItems from "./NavItems";
+
 import logo from "../../assets/logo.svg";
 import open from "../../assets/menu-open-button.svg";
 import close from "../../assets/menu-close-button.svg";
