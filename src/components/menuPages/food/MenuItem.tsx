@@ -58,7 +58,7 @@ const MenuItem: React.FC<IProps> = ({ menuItem, happyHour }) => {
   });
 
   return (
-    <li className={`menu-item ${menuItem.soldOut && `sold-out`}`}>
+    <li className={`menu-item ${menuItem.soldOut ? `sold-out` : ""}`}>
       <div className="menu-item_main">
         <div className="menu-item_main_words">
           <header>{menuItem.name}</header>
