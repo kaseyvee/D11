@@ -11,7 +11,7 @@ const HomepageHero: React.FC = () => {
       <div className="homepage-hero_background">
         <motion.img
           src={hero}
-          alt="background"
+          alt=""
           className="homepage-hero_background_img"
           initial={{ opacity: 0, filter: "blur(10px)"  }}
           whileInView={{ opacity: 1, filter: "blur(0)" }}
@@ -40,7 +40,7 @@ const HomepageHero: React.FC = () => {
             </span>
 
             <span className="homepage-hero_content_words_greeting">
-              Mot Hai Ba, Dzo!
+              Một, hai, ba, dzô!
             </span>
           </h1>
 

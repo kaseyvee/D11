@@ -1,11 +1,13 @@
 import { useContext, useEffect } from "react";
+
 import { MenuContext } from "../App";
+import useScrollToTop from "../helpers/useScrollToTop";
+import getMenuType from "../helpers/getMenuType";
+
 import DrinkSection from "../components/menuPages/drinks/DrinkSection";
 import MenuNav from "../components/menuPages/MenuNav";
 import MenuSection from "../components/menuPages/food/MenuSection";
 import PageHeader from "../components/menuPages/PageHeader";
-import getMenuType from "../helpers/getMenuType";
-import useScrollToTop from "../helpers/useScrollToTop";
 import DietTable from "../components/menuPages/food/DietTable";
 
 const TakeOutPage: React.FC = () => {

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 import externalLinks from "../helpers/externalLinks";
@@ -7,6 +8,10 @@ import HeroButton from "../components/HeroButton";
 import error from "../assets/error.jpg";
 
 const ErrorPage: React.FC = () => {
+  useEffect(() => {
+    document.title = "Uh oh! 404 | District Eleven";
+  }, []);
+
   return (
     <main className="homepage-hero">
       <div className="wrapper">
@@ -15,10 +20,10 @@ const ErrorPage: React.FC = () => {
             src={error}
             alt="background"
             className="homepage-hero_background_img"
-            initial={{ opacity: 0, filter: "blur(10px)"  }}
+            initial={{ opacity: 0, filter: "blur(10px)" }}
             whileInView={{ opacity: 1, filter: "blur(0)" }}
             viewport={{ once: true }}
-            transition={{duration: 0.8}}
+            transition={{ duration: 0.8 }}
           />
         </div>
 

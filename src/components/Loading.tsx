@@ -3,7 +3,7 @@ import logo from "../assets/logo.svg";
 
 const Loading: React.FC = () => {
   return (
-    <motion.main className="loading" exit={{ opacity: 0 }}>
+    <motion.main className="loading" exit={{ opacity: 0 }} role="alert" aria-busy="true">
       <motion.img
         src={logo}
         alt="loading"

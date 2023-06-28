@@ -1,10 +1,12 @@
+import { useContext, useEffect } from "react";
+
+import { MenuContext } from "../App";
+import useScrollToTop from "../helpers/useScrollToTop";
+
 import MenuSection from "../components/menuPages/food/MenuSection";
 import PageHeader from "../components/menuPages/PageHeader";
 import MenuNav from "../components/menuPages/MenuNav";
 import DrinkSection from "../components/menuPages/drinks/DrinkSection";
-import { useContext, useEffect } from "react";
-import { MenuContext } from "../App";
-import useScrollToTop from "../helpers/useScrollToTop";
 import DietTable from "../components/menuPages/food/DietTable";
 
 const MenuPage: React.FC = () => {
