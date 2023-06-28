@@ -5,7 +5,7 @@ import externalLinks from "../helpers/externalLinks";
 
 import HeroButton from "../components/HeroButton";
 
-import error from "../assets/error.jpg";
+// import error from "../assets/error.jpg";
 
 const ErrorPage: React.FC = () => {
   useEffect(() => {
@@ -13,9 +13,9 @@ const ErrorPage: React.FC = () => {
   }, []);
 
   return (
-    <main className="homepage-hero">
+    <main className="error-page">
       <div className="wrapper">
-        <div className="homepage-hero_background">
+        {/* <div className="homepage-hero_background">
           <motion.img
             src={error}
             alt="background"
@@ -25,7 +25,7 @@ const ErrorPage: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           />
-        </div>
+        </div> */}
 
         <motion.div
           className="homepage-hero_content"

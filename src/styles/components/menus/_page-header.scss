@@ -1,8 +1,7 @@
 .page-header {
   @include montserrat(700);
   color: $white;
-  background: url('/D11/menu-bg.jpg');
-  // background-position: center;
+  background: url('/D11/menu-bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 6rem 1rem;
@@ -21,8 +20,8 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background: $blackFade;
-    filter: brightness(0.3);
+    background: $black;
+    opacity: 0.6;
     z-index: -1;
   }
 
