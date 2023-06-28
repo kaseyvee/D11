@@ -1,4 +1,5 @@
 to do:
+- figure out smoother loading for hero image and menu page image on initial visit
 - get better restaurant/food photos
 - change drink category names
 - check if vietnamese categories are correct lol
