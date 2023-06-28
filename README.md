@@ -19,3 +19,4 @@ stretch:
 - make hours, contacts, and external links manageable through contentful
 - implement 3rd party map in footer
 - refactor menu pages dizasta town
+- make menu section navigation more obvious it is scrollable on mobile
