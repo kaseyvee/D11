@@ -4,7 +4,7 @@
   background: url('/D11/menu-bg.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 6rem 1rem;
+  padding: 6rem 2rem;
   position: relative;
   z-index: 1;
 
@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  min-height: 25rem;
 
   &::before {
     content: "";
@@ -51,6 +52,7 @@
     background-position-y: 45%;
     padding-top: 10rem;
     padding-bottom: 6rem;
+    min-height: unset;
 
     &_buttons {
       flex-direction: row;
