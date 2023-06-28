@@ -8,7 +8,7 @@
   
   position: sticky;
   top: 0;
-  padding-block: 1rem;
+  padding: 1rem;
   z-index: 10;
 
   width: 100vw;
@@ -23,7 +23,7 @@
     display: none; /* Chrome */
   }
 
-  @media (min-width: 508px) {
+  @media (min-width: 545px) {
     justify-content: center;
   }
 
