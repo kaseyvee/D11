@@ -11,10 +11,14 @@ const ErrorPage: React.FC = () => {
     <main className="homepage-hero">
       <div className="wrapper">
         <div className="homepage-hero_background">
-          <img
+          <motion.img
             src={error}
             alt="background"
             className="homepage-hero_background_img"
+            initial={{ opacity: 0, filter: "blur(10px)"  }}
+            whileInView={{ opacity: 1, filter: "blur(0)" }}
+            viewport={{ once: true }}
+            transition={{duration: 0.8}}
           />
         </div>
 

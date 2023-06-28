@@ -3,16 +3,20 @@ import { motion } from "framer-motion";
 import externalLinks from "../../helpers/externalLinks";
 
 import HeroButton from "../HeroButton";
-import hero from "../../assets/hero.jpg";
+import hero from "../../assets/hero.webp";
 
 const HomepageHero: React.FC = () => {
   return (
     <section className="homepage-hero">
       <div className="homepage-hero_background">
-        <img
+        <motion.img
           src={hero}
           alt="background"
           className="homepage-hero_background_img"
+          initial={{ opacity: 0, filter: "blur(10px)"  }}
+          whileInView={{ opacity: 1, filter: "blur(0)" }}
+          viewport={{ once: true }}
+          transition={{duration: 0.8}}
         />
       </div>
 
