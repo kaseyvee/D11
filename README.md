@@ -33,7 +33,7 @@
 1. **Frustration**: Updating menu items is a repetitive task that must be changed manually on all menu pages (all day menu, happy hour, and take-out). <br>
 **Solution**: Request all menu item entries from Contentful at initial visit and use boolean values to dynamically render associated menu items to each menu page. User only needs to update item once on Contentful and publish changes.
 
-2. **Frustration**: Longer customer interactions due to sold out menu items that are not reflected on online menu. Servers do not have access to make quick menu updates during service. Can probably change on server iPads, but poor UI allows the website to be vulnerable to mistaken layout changes (ie. accidentally adding things where they shouldn't be, accidentally deleting other content, etc.). <br>
+2. **Frustration**: Longer customer interactions due to sold out menu items that are not reflected on online menu. Servers do not have access to make quick menu updates during service. Can probably change on server iPads, but UI allows the website to be vulnerable to mistaken layout changes (ie. accidentally adding things where they shouldn't be, accidentally deleting other content, etc.). <br>
 **Solution**: Contentful UI allows to make swift menu changes on server iPads with ease, without the website being vulnerable to layout shifts/mistakes. This change is made by simply toggling a boolean value and publishing these changes.
 
 3. **Frustration**: Seasonal or rotating menu items that should be removed completely from customer view must be manually typed back onto the menu when a menu item is back in season/rotation. <br>
