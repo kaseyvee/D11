@@ -1,6 +1,6 @@
 .error-page {
   @extend .homepage-hero;
-  background: url("/D11/error.webp") center no-repeat;
+  background: url("/error.webp") center no-repeat;
   background-size: cover;
 
   @media (min-width: 769px) {
