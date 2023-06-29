@@ -42,8 +42,6 @@
 4. **Frustration**: Longer menu navigation for customers on mobile due to having to manually scroll to each section. <br>
 **Solution**: Implement menu section navigation bar that remains at the top of the screen, so customers can jump from food to drinks, for example.
 
-5. **Frustration**: Not the most visually appealing. <br>
-**Solution**: Website redesign.
 
 ## To do:
 - refactor fetching logic to use single API call for all contentful entries
