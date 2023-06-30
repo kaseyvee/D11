@@ -47,7 +47,7 @@ const MenuPage: React.FC<MenuPageProps> = ({ menuType }) => {
   const allDayDrinksMenu = Object.entries(drinks).map(
     ([key, value]: [string, any]) => {
       if (value.length !== 0) {
-        return <DrinkSection key={key} drinkItems={value} />;
+        return <DrinkSection key={key} menuType={menuType} drinkItems={value} />;
       }
     }
   );
