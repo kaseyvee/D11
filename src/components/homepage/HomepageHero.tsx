@@ -1,5 +1,5 @@
-import { motion } from "framer-motion";
 import { useContext } from "react";
+import { motion } from "framer-motion";
 import { DataContext } from "../../App";
 
 import HeroButton from "../HeroButton";
@@ -16,7 +16,7 @@ const HomepageHero: React.FC = () => {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8}}
+          transition={{ duration: 0.8 }}
         >
           <h1 className="homepage-hero_content_words">
             <span className="homepage-hero_content_words_header">

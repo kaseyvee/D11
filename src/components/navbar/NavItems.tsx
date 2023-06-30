@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-import externalLinks from "../../helpers/externalLinks";
 import HeroButton from "../HeroButton";
 import { DataContext } from "../../App";
 
