@@ -1,8 +1,6 @@
 import ErrorPage from "./_error";
-import HappyHourPage from "./_happy-hour";
 import Homepage from "./_home";
 import MenuPage from "./_menu";
-import TakeOutPage from "./_take-out";
 
 const pagesData = [
   {
@@ -12,24 +10,24 @@ const pagesData = [
   },
   {
     path: "/menu",
-    element: <MenuPage />,
+    element: <MenuPage menuType="allDay" />,
     title: "menu",
   },
   {
     path: "/happy-hour",
-    element: <HappyHourPage />,
+    element: <MenuPage menuType="happyHour" />,
     title: "happy hour",
   },
   {
     path: "/take-out",
-    element: <TakeOutPage />,
+    element: <MenuPage menuType="takeOut" />,
     title: "take-out",
   },
   {
     path: "*",
     element: <ErrorPage />,
     title: "error",
-  }
+  },
 ];
 
 export default pagesData;

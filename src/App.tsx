@@ -2,30 +2,22 @@ import React, { createContext, useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import { useFetchMenu } from "./helpers/useFetchMenu";
-import { useFetchDrinksMenu } from "./helpers/useFetchDrinksMenu";
+import Router from "./pages/router";
+import useFetchData from "./helpers/useFetchData";
 
 import Loading from "./components/Loading";
 import NavBar from "./components/navbar";
 import Footer from "./components/Footer";
 
-import Router from "./pages/router";
-
-export const MenuContext = createContext({});
+export const DataContext = createContext({});
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
-  let menu: any = useFetchMenu();
-  let drinks: any = useFetchDrinksMenu();
-  // let info: any = useFetchInfo();
+  const data = useFetchData();
 
   useEffect(() => {
-    if (
-      Object.keys(menu).length > 0 &&
-      Object.keys(drinks).length > 0
-      // && Object.keys(info).length > 0
-    ) {
+    if (Object.keys(data).length > 0) {
       setTimeout(() => {
         setLoading(false);
       }, 500);
@@ -38,13 +30,13 @@ const App: React.FC = () => {
         {loading ? (
           <Loading />
         ) : (
-          <MenuContext.Provider value={{ menu, drinks }}>
+          <DataContext.Provider value={{ data }}>
             <NavBar />
 
             <Router />
 
             <Footer />
-          </MenuContext.Provider>
+          </DataContext.Provider>
         )}
       </AnimatePresence>
     </BrowserRouter>

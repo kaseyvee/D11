@@ -23,10 +23,10 @@ interface IProps {
       price: number;
     }[];
   }[];
-  happyHour?: boolean;
+  menuType: string;
 }
 
-const MenuSection: React.FC<IProps> = ({ menuItems, happyHour }) => {
+const MenuSection: React.FC<IProps> = ({ menuItems, menuType }) => {
   const categoryEnglish = menuItems[0].category.english;
   const categoryVietnamese = menuItems[0].category.vietnamese;
 
@@ -34,7 +34,7 @@ const MenuSection: React.FC<IProps> = ({ menuItems, happyHour }) => {
     return (
       <MenuItem
         key={menuItem.name + categoryEnglish}
-        happyHour={happyHour}
+        menuType={menuType}
         menuItem={menuItem}
       />
     );

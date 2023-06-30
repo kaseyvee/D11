@@ -48,7 +48,6 @@
 
 ## To do:
 
-- refactor fetching logic to use single API call for all contentful entries
 - change drink category names
 - check if vietnamese categories are correct lol
 - convert project to nextjs app for ssg and implement contentful webhooks
@@ -56,7 +55,5 @@
 ## Furthur development:
 
 - get better restaurant/food photos
-- make hours, contacts, and external links manageable through contentful
 - implement 3rd party map in footer
-- refactor menu pages dizasta town
 - make menu section navigation more obvious it is scrollable on mobile

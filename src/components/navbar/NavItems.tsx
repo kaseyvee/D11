@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import externalLinks from "../../helpers/externalLinks";
 import HeroButton from "../HeroButton";
+import { DataContext } from "../../App";
 
 interface IProps {
   style?: { animation: string };
@@ -10,6 +11,9 @@ interface IProps {
 }
 
 const NavItems: React.FC<IProps> = (props: IProps) => {
+  const { data }: any = useContext(DataContext);
+  const generalInfo = data.generalInfo;
+
   const listItemData = [
     {
       name: "HOME",
@@ -21,11 +25,11 @@ const NavItems: React.FC<IProps> = (props: IProps) => {
     },
     {
       name: "UBEREATS",
-      link: externalLinks.uberEats,
+      link: generalInfo.uberEats,
     },
     {
       name: "RESERVATIONS",
-      link: externalLinks.reservations,
+      link: generalInfo.reservations,
     },
     {
       name: "CONTACT US",

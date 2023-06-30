@@ -1,26 +1,46 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 
-import { MenuContext } from "../App";
+import { DataContext } from "../App";
 import useScrollToTop from "../helpers/useScrollToTop";
+import getMenuType from "../helpers/getMenuType";
 
-import MenuSection from "../components/menuPages/food/MenuSection";
 import PageHeader from "../components/menuPages/PageHeader";
-import MenuNav from "../components/menuPages/MenuNav";
-import DrinkSection from "../components/menuPages/drinks/DrinkSection";
+import MenuSection from "../components/menuPages/food/MenuSection";
 import DietTable from "../components/menuPages/food/DietTable";
+import DrinkSection from "../components/menuPages/drinks/DrinkSection";
+import HeroButton from "../components/HeroButton";
 
-const MenuPage: React.FC = () => {
+interface MenuPageProps {
+  menuType: string;
+}
+
+const MenuPage: React.FC<MenuPageProps> = ({ menuType }) => {
   useScrollToTop();
-  
-  useEffect(() => {
-    document.title = "Menu | District Eleven";
-  }, []);
 
-  const { menu, drinks }: any = useContext(MenuContext);
+  const menuTypes: any = {
+    allDay: {
+      title: "All Day",
+      type: "allDay",
+    },
+    happyHour: {
+      title: "Happy Hour",
+      type: "happyHour",
+    },
+    takeOut: {
+      title: "Take-Out",
+      type: "takeOut",
+    },
+  };
+
+  document.title = `${menuTypes[menuType].title} Menu | District Eleven`;
+
+  const { data }: any = useContext(DataContext);
+  const menu = getMenuType(data.menu, menuType);
+  const drinks = getMenuType(data.drinks, menuType);
 
   const allDayMenu = Object.entries(menu).map(([key, value]: [string, any]) => {
     if (value.length !== 0) {
-      return <MenuSection key={key} menuItems={value} />;
+      return <MenuSection key={key} menuType={menuType} menuItems={value} />;
     }
   });
 
@@ -32,27 +52,51 @@ const MenuPage: React.FC = () => {
     }
   );
 
+  const menuSectionsList = Object.entries(menu).map(([key, value]: [string, any]) => {
+    if (value.length > 0) {
+      return (
+        <li key={key + "menu-nav"}>
+          <HeroButton
+            href={`#${key.toLowerCase()}`}
+            color="white"
+            children={key.toUpperCase()}
+            className="menu-nav-button"
+          />
+        </li>
+      );
+    }
+  });
+
   return (
     <main className="menu-page page">
-      <PageHeader title="ALL DAY MENU" />
-      <MenuNav />
+      <PageHeader
+        menuType={menuType}
+        title={`${menuTypes[menuType].title.toUpperCase()} MENU`}
+      />
+      <ul className="menu-page_nav">
+        {menuSectionsList}
+        <li>
+          <HeroButton
+            href="#drinks"
+            color="white"
+            children="DRINKS"
+            className="menu-nav-button"
+          />
+        </li>
+      </ul>
 
-      {Object.keys(menu).length > 0 && (
-        <div className="menu-page_sections">
-          {allDayMenu}
-          <DietTable />
-        </div>
-      )}
+      <div className="menu-page_sections">
+        {allDayMenu}
+        <DietTable />
+      </div>
 
-      {Object.keys(drinks).length > 0 && (
-        <div className="menu-page_sections" id="drinks">
-          <header className="menu-page_sections_drinks-header">
-            <h2>Drinks</h2>
-            <span>đồ uống</span>
-          </header>
-          {allDayDrinksMenu}
-        </div>
-      )}
+      <div className="menu-page_sections" id="drinks">
+        <header className="menu-page_sections_drinks-header">
+          <h2>Drinks</h2>
+          <span>đồ uống</span>
+        </header>
+        {allDayDrinksMenu}
+      </div>
     </main>
   );
 };
