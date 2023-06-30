@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import externalLinks from "../helpers/externalLinks";
 
 import HeroButton from "../components/HeroButton";
+import useScrollToTop from "../helpers/useScrollToTop";
 
 const ErrorPage: React.FC = () => {
+  useScrollToTop();
+  
   useEffect(() => {
     document.title = "Uh oh! 404 | District Eleven";
   }, []);
