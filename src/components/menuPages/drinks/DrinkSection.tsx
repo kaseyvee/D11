@@ -23,36 +23,28 @@ interface IProps {
 const DrinkSection: React.FC<IProps> = ({ drinkItems, happyHour }) => {
   const drinkType = drinkItems[0].type;
 
+  const componentMapping: any = {
+    cocktail: GlassItem,
+    "non-alcoholic": GlassItem,
+    shooter: GlassItem,
+    "beer on tap": TapItem,
+    "bottled beer": BottleItem,
+    soju: BottleItem,
+    sake: BottleItem,
+  };
+
   const drinkList = drinkItems.map((drinkItem) => {
-    if (
-      drinkItem.type === "cocktail" ||
-      drinkItem.type === "non-alcoholic" ||
-      drinkItem.type === "shooter"
-    ) {
+    const Component = componentMapping[drinkItem.type];
+    if (Component) {
       return (
-        <GlassItem
+        <Component
           key={drinkItem.name}
           happyHour={happyHour}
           drinkItem={drinkItem}
         />
       );
     }
-    if (drinkItem.type === "beer on tap") {
-      return (
-        <TapItem
-          key={drinkItem.name}
-          happyHour={happyHour}
-          drinkItem={drinkItem}
-        />
-      );
-    }
-    if (
-      drinkItem.type === "bottled beer" ||
-      drinkItem.type === "soju" ||
-      drinkItem.type === "sake"
-    ) {
-      return <BottleItem key={drinkItem.name} drinkItem={drinkItem} />;
-    }
+    return null;
   });
 
   return (
