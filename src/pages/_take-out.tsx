@@ -4,15 +4,15 @@ import { DataContext } from "../App";
 import useScrollToTop from "../helpers/useScrollToTop";
 import getMenuType from "../helpers/getMenuType";
 
-import DrinkSection from "../components/menuPages/drinks/DrinkSection";
+import PageHeader from "../components/menuPages/PageHeader";
 import MenuNav from "../components/menuPages/MenuNav";
 import MenuSection from "../components/menuPages/food/MenuSection";
-import PageHeader from "../components/menuPages/PageHeader";
+import DrinkSection from "../components/menuPages/drinks/DrinkSection";
 import DietTable from "../components/menuPages/food/DietTable";
 
 const TakeOutPage: React.FC = () => {
   useScrollToTop();
-  
+
   useEffect(() => {
     document.title = "Take-Out | District Eleven";
   }, []);
@@ -42,23 +42,18 @@ const TakeOutPage: React.FC = () => {
       <PageHeader title="TAKE-OUT MENU" />
       <MenuNav />
 
-      {Object.keys(takeOutMenu).length > 0 &&
-        Object.keys(takeOutDrinksMenu).length > 0 && (
-          <>
-            <div className="menu-page_sections">
-              {takeOutMenu}
-              <DietTable />
-            </div>
+      <div className="menu-page_sections">
+        {takeOutMenu}
+        <DietTable />
+      </div>
 
-            <div className="menu-page_sections" id="drinks">
-              <header className="menu-page_sections_drinks-header">
-                <h2>Drinks</h2>
-                <span>đồ uống</span>
-              </header>
-              {takeOutDrinksMenu}
-            </div>
-          </>
-        )}
+      <div className="menu-page_sections" id="drinks">
+        <header className="menu-page_sections_drinks-header">
+          <h2>Drinks</h2>
+          <span>đồ uống</span>
+        </header>
+        {takeOutDrinksMenu}
+      </div>
     </main>
   );
 };

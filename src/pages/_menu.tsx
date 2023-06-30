@@ -1,17 +1,17 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 
 import { DataContext } from "../App";
 import useScrollToTop from "../helpers/useScrollToTop";
 
-import MenuSection from "../components/menuPages/food/MenuSection";
 import PageHeader from "../components/menuPages/PageHeader";
 import MenuNav from "../components/menuPages/MenuNav";
+import MenuSection from "../components/menuPages/food/MenuSection";
 import DrinkSection from "../components/menuPages/drinks/DrinkSection";
 import DietTable from "../components/menuPages/food/DietTable";
 
 const MenuPage: React.FC = () => {
   useScrollToTop();
-  
+
   useEffect(() => {
     document.title = "Menu | District Eleven";
   }, []);
@@ -39,22 +39,18 @@ const MenuPage: React.FC = () => {
       <PageHeader title="ALL DAY MENU" />
       <MenuNav />
 
-      {Object.keys(menu).length > 0 && (
-        <div className="menu-page_sections">
-          {allDayMenu}
-          <DietTable />
-        </div>
-      )}
+      <div className="menu-page_sections">
+        {allDayMenu}
+        <DietTable />
+      </div>
 
-      {Object.keys(drinks).length > 0 && (
-        <div className="menu-page_sections" id="drinks">
-          <header className="menu-page_sections_drinks-header">
-            <h2>Drinks</h2>
-            <span>đồ uống</span>
-          </header>
-          {allDayDrinksMenu}
-        </div>
-      )}
+      <div className="menu-page_sections" id="drinks">
+        <header className="menu-page_sections_drinks-header">
+          <h2>Drinks</h2>
+          <span>đồ uống</span>
+        </header>
+        {allDayDrinksMenu}
+      </div>
     </main>
   );
 };
