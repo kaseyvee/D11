@@ -1,8 +1,13 @@
+import { useContext } from "react";
 import { motion } from "framer-motion";
-import externalLinks from "../../helpers/externalLinks";
+import { DataContext } from "../../App";
+
 import HeroButton from "../HeroButton";
 
 const HomepageHero: React.FC = () => {
+  const { data }: any = useContext(DataContext);
+  const reservations = data.generalInfo.reservations;
+
   return (
     <section className="homepage-hero">
       <div className="wrapper">
@@ -11,7 +16,7 @@ const HomepageHero: React.FC = () => {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8}}
+          transition={{ duration: 0.8 }}
         >
           <h1 className="homepage-hero_content_words">
             <span className="homepage-hero_content_words_header">
@@ -32,7 +37,7 @@ const HomepageHero: React.FC = () => {
           <div className="homepage-hero_content_buttons">
             <HeroButton to="/menu" color="white" children="MENU" />
             <HeroButton
-              to={externalLinks.reservations}
+              to={reservations}
               color="white"
               children="BOOK A TABLE"
             />

@@ -1,10 +1,10 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { motion } from "framer-motion";
 
-import externalLinks from "../helpers/externalLinks";
+import useScrollToTop from "../helpers/useScrollToTop";
+import { DataContext } from "../App";
 
 import HeroButton from "../components/HeroButton";
-import useScrollToTop from "../helpers/useScrollToTop";
 
 const ErrorPage: React.FC = () => {
   useScrollToTop();
@@ -12,6 +12,9 @@ const ErrorPage: React.FC = () => {
   useEffect(() => {
     document.title = "Uh oh! 404 | District Eleven";
   }, []);
+
+  const { data }: any = useContext(DataContext);
+  const reservations = data.generalInfo.reservations;
 
   return (
     <main className="error-page">
@@ -37,7 +40,7 @@ const ErrorPage: React.FC = () => {
           <div className="homepage-hero_content_buttons">
             <HeroButton to="/menu" color="white" children="MENU" />
             <HeroButton
-              to={externalLinks.reservations}
+              to={reservations}
               color="white"
               children="BOOK A TABLE"
             />

@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
               className="footer-button"
             />
             <HeroButton
-              to={generalInfo.tiktok}
+              to={generalInfo.tikTok}
               color="yellow"
               children="Tiktok"
               className="footer-button"
