@@ -17,7 +17,9 @@ const HappyHourPage: React.FC = () => {
     document.title = "Happy Hour | District Eleven";
   }, []);
 
-  const { menu, drinks }: any = useContext(MenuContext);
+  const { data }: any = useContext(MenuContext);
+  const menu = data.menu;
+  const drinks = data.drinks;
 
   const happyHourMenu = Object.entries(getMenuType(menu, "happyHour")).map(
     ([key, value]: [string, any]) => {

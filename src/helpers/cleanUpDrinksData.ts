@@ -1,4 +1,8 @@
-export default function getOrganizedDrinksMenu(drinks: any) {
+export default function cleanUpDrinksData(drinks: any) {
+  const filteredDrinks = drinks.map((drink: any) => {
+    return drink.fields;
+  });
+
   const categories = [
     "cocktail",
     "shooter",
@@ -11,7 +15,7 @@ export default function getOrganizedDrinksMenu(drinks: any) {
   const output: any = {};
 
   for (let category of categories) {
-    output[category] = drinks.filter(
+    output[category] = filteredDrinks.filter(
       (drinkItem: any) => drinkItem.type.toLowerCase() === category
     );
   }
@@ -30,7 +34,7 @@ export default function getOrganizedDrinksMenu(drinks: any) {
     return 0;
   });
 
-  const filteredDrinks = {
+  const cleanDrinksData = {
     cocktails: output.cocktail,
     shooters: output.shooter,
     beerOnTap: alphabetizedTaps,
@@ -40,5 +44,5 @@ export default function getOrganizedDrinksMenu(drinks: any) {
     nonAlcoholic: output["non-alcoholic"],
   };
 
-  return filteredDrinks;
+  return cleanDrinksData;
 }

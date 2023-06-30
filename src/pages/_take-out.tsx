@@ -17,7 +17,9 @@ const TakeOutPage: React.FC = () => {
     document.title = "Take-Out | District Eleven";
   }, []);
 
-  const { menu, drinks }: any = useContext(MenuContext);
+  const { data }: any = useContext(MenuContext);
+  const menu = data.menu;
+  const drinks = data.drinks;
 
   const takeOutMenu = Object.entries(getMenuType(menu, "takeOut")).map(
     ([key, value]: [string, any]) => {

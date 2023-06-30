@@ -10,22 +10,17 @@ import NavBar from "./components/navbar";
 import Footer from "./components/Footer";
 
 import Router from "./pages/router";
+import useFetchData from "./helpers/useFetchData";
 
 export const MenuContext = createContext({});
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
-  let menu: any = useFetchMenu();
-  let drinks: any = useFetchDrinksMenu();
-  // let info: any = useFetchInfo();
+  const data = useFetchData();
 
   useEffect(() => {
-    if (
-      Object.keys(menu).length > 0 &&
-      Object.keys(drinks).length > 0
-      // && Object.keys(info).length > 0
-    ) {
+    if (Object.keys(data).length > 0) {
       setTimeout(() => {
         setLoading(false);
       }, 500);
@@ -38,7 +33,7 @@ const App: React.FC = () => {
         {loading ? (
           <Loading />
         ) : (
-          <MenuContext.Provider value={{ menu, drinks }}>
+          <MenuContext.Provider value={{ data }}>
             <NavBar />
 
             <Router />

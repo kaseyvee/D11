@@ -16,7 +16,9 @@ const MenuPage: React.FC = () => {
     document.title = "Menu | District Eleven";
   }, []);
 
-  const { menu, drinks }: any = useContext(MenuContext);
+  const { data }: any = useContext(MenuContext);
+  const menu = data.menu;
+  const drinks = data.drinks;
 
   const allDayMenu = Object.entries(menu).map(([key, value]: [string, any]) => {
     if (value.length !== 0) {
