@@ -8,21 +8,39 @@ import MenuNav from "../components/menuPages/MenuNav";
 import MenuSection from "../components/menuPages/food/MenuSection";
 import DrinkSection from "../components/menuPages/drinks/DrinkSection";
 import DietTable from "../components/menuPages/food/DietTable";
+import getMenuType from "../helpers/getMenuType";
 
-const MenuPage: React.FC = () => {
+interface MenuPageProps {
+  menuType: string;
+}
+
+const MenuPage: React.FC<MenuPageProps> = ({ menuType }) => {
   useScrollToTop();
-
-  useEffect(() => {
-    document.title = "Menu | District Eleven";
-  }, []);
+  
+  const menuTypes: any = {
+    allDay: {
+      title: "All Day",
+      type: "allDay"
+    },
+    happyHour: {
+      title: "Happy Hour",
+      type: "happyHour"
+    },
+    takeOut: {
+      title: "Take-Out",
+      type: "takeOut"
+    }
+  };
+  
+  document.title = `${menuTypes[menuType].title} Menu | District Eleven`;
 
   const { data }: any = useContext(DataContext);
-  const menu = data.menu;
-  const drinks = data.drinks;
+  const menu = getMenuType(data.menu, menuType);
+  const drinks = getMenuType(data.drinks, menuType);
 
   const allDayMenu = Object.entries(menu).map(([key, value]: [string, any]) => {
     if (value.length !== 0) {
-      return <MenuSection key={key} menuItems={value} />;
+      return <MenuSection key={key} menuType={menuType} menuItems={value} />;
     }
   });
 
@@ -36,7 +54,7 @@ const MenuPage: React.FC = () => {
 
   return (
     <main className="menu-page page">
-      <PageHeader title="ALL DAY MENU" />
+      <PageHeader title={`${menuTypes[menuType].title.toUpperCase()} MENU`} />
       <MenuNav />
 
       <div className="menu-page_sections">
