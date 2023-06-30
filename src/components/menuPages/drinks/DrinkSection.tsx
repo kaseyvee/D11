@@ -1,4 +1,5 @@
 import BottleItem from "./BottleItem";
+import DrinkItem from "./DrinkItem";
 import GlassItem from "./GlassItem";
 import TapItem from "./TapItem";
 
@@ -23,28 +24,14 @@ interface IProps {
 const DrinkSection: React.FC<IProps> = ({ drinkItems, menuType }) => {
   const drinkType = drinkItems[0].type;
 
-  const componentMapping: any = {
-    cocktail: GlassItem,
-    "non-alcoholic": GlassItem,
-    shooter: GlassItem,
-    "beer on tap": TapItem,
-    "bottled beer": BottleItem,
-    soju: BottleItem,
-    sake: BottleItem,
-  };
-
   const drinkList = drinkItems.map((drinkItem) => {
-    const Component = componentMapping[drinkItem.type];
-    if (Component) {
-      return (
-        <Component
-          key={drinkItem.name}
-          menuType={menuType}
-          drinkItem={drinkItem}
-        />
-      );
-    }
-    return null;
+    return (
+      <DrinkItem
+        key={drinkItem.name}
+        menuType={menuType}
+        drinkItem={drinkItem}
+      />
+    );
   });
 
   return (
