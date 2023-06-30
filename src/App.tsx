@@ -2,12 +2,12 @@ import React, { createContext, useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
+import Router from "./pages/router";
+import useFetchData from "./helpers/useFetchData";
+
 import Loading from "./components/Loading";
 import NavBar from "./components/navbar";
 import Footer from "./components/Footer";
-
-import Router from "./pages/router";
-import useFetchData from "./helpers/useFetchData";
 
 export const DataContext = createContext({});
 

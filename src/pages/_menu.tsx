@@ -2,13 +2,13 @@ import { useContext, useEffect } from "react";
 
 import { DataContext } from "../App";
 import useScrollToTop from "../helpers/useScrollToTop";
+import getMenuType from "../helpers/getMenuType";
 
 import PageHeader from "../components/menuPages/PageHeader";
 import MenuNav from "../components/menuPages/MenuNav";
 import MenuSection from "../components/menuPages/food/MenuSection";
-import DrinkSection from "../components/menuPages/drinks/DrinkSection";
 import DietTable from "../components/menuPages/food/DietTable";
-import getMenuType from "../helpers/getMenuType";
+import DrinkSection from "../components/menuPages/drinks/DrinkSection";
 
 interface MenuPageProps {
   menuType: string;
@@ -16,22 +16,22 @@ interface MenuPageProps {
 
 const MenuPage: React.FC<MenuPageProps> = ({ menuType }) => {
   useScrollToTop();
-  
+
   const menuTypes: any = {
     allDay: {
       title: "All Day",
-      type: "allDay"
+      type: "allDay",
     },
     happyHour: {
       title: "Happy Hour",
-      type: "happyHour"
+      type: "happyHour",
     },
     takeOut: {
       title: "Take-Out",
-      type: "takeOut"
-    }
+      type: "takeOut",
+    },
   };
-  
+
   document.title = `${menuTypes[menuType].title} Menu | District Eleven`;
 
   const { data }: any = useContext(DataContext);
@@ -54,7 +54,7 @@ const MenuPage: React.FC<MenuPageProps> = ({ menuType }) => {
 
   return (
     <main className="menu-page page">
-      <PageHeader title={`${menuTypes[menuType].title.toUpperCase()} MENU`} />
+      <PageHeader menuType={menuType} title={`${menuTypes[menuType].title.toUpperCase()} MENU`} />
       <MenuNav />
 
       <div className="menu-page_sections">

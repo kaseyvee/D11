@@ -1,8 +1,31 @@
-import externalLinks from "../helpers/externalLinks";
+import ReactMarkdown from "react-markdown";
+
 import HeroButton from "./HeroButton";
 import Logo from "../assets/logo.svg";
+import { useContext } from "react";
+import { DataContext } from "../App";
 
 const Footer: React.FC = () => {
+  const { data }: any = useContext(DataContext);
+  const generalInfo = data.generalInfo;
+
+  function formatPhoneNumber(phoneNumber: string) {
+    let numberArr = phoneNumber.split("");
+    numberArr.splice(3, 0, ".");
+    numberArr.splice(7, 0, ".");
+
+    return numberArr.join("");
+  }
+
+  function formatAccessiblePhoneNumber(phoneNumber: string) {
+    const spacedNumber = phoneNumber.split("").join(" ");
+
+    // Insert a dot after every third digit
+    const formattedPhoneNumber = spacedNumber.replace(/(\d{3})(?=\d)/g, "$1.");
+
+    return formattedPhoneNumber;
+  }
+
   return (
     <footer className="footer" id="footer">
       <div className="wrapper">
@@ -10,39 +33,24 @@ const Footer: React.FC = () => {
           <div className="footer_top_info">
             <div className="footer_top_info_item">
               <header className="footer_top_info_item_header">HOURS</header>
-              <div className="footer_top_info_item_content">
-                <p>
-                  <strong>Mon:</strong> Closed
-                </p>
-                <p>
-                  <strong>Tues - Thurs:</strong> 5 pm - 1 am
-                </p>
-                <p>
-                  <strong>Fri:</strong> 5 pm - 2 am
-                </p>
-                <p>
-                  <strong>Sat:</strong> 11am - 3pm, 5 pm - 2 am
-                </p>
-                <p>
-                  <strong>Sun:</strong> 11am - 3pm, 5pm - 12am
-                </p>
-              </div>
+              <ReactMarkdown
+                children={generalInfo.hours}
+                className="footer_top_info_item_content"
+              />
             </div>
             <div className="footer_top_info_item">
               <header className="footer_top_info_item_header">LOCATION</header>
               <div className="footer_top_info_item_content">
-                <p>4063 Main Street, Vancouver, BC</p>
+                <p>{generalInfo.address}</p>
               </div>
             </div>
             <div className="footer_top_info_item">
               <header className="footer_top_info_item_header">CONTACT</header>
               <div className="footer_top_info_item_content">
-                <a href="tel:6045662021" aria-label="6 0 4. 5 6 6. 2 0 2 1.">
-                  604.566.2021
+                <a href="tel:6045662021" aria-label={formatAccessiblePhoneNumber(generalInfo.phoneNumber)}>
+                  {formatPhoneNumber(generalInfo.phoneNumber)}
                 </a>
-                <a href="mailto: districteleven_@outlook.com">
-                  districteleven_@outlook.com
-                </a>
+                <a href={`mailto: ${generalInfo.email}`}>{generalInfo.email}</a>
               </div>
             </div>
           </div>
@@ -65,13 +73,13 @@ const Footer: React.FC = () => {
           />
           <div className="footer_bottom_socials">
             <HeroButton
-              to={externalLinks.instagram}
+              to={generalInfo.instagram}
               color="yellow"
               children="Instagram"
               className="footer-button"
             />
             <HeroButton
-              to={externalLinks.tikTok}
+              to={generalInfo.tiktok}
               color="yellow"
               children="Tiktok"
               className="footer-button"

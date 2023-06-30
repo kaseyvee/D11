@@ -2,14 +2,18 @@ import HeroButton from "../HeroButton";
 
 interface IProps {
   title: string;
+  menuType: string;
 }
 
-const PageHeader: React.FC<IProps> = (props: IProps) => {
+const PageHeader: React.FC<IProps> = ({ title, menuType }: IProps) => {
   return (
     <div className="page-header">
-      <h1 className="page-header_title">{props.title}</h1>
+      <div className="page-header_heading">
+        <h1 className="page-header_heading_title">{title}</h1>
+        {menuType === "happyHour" && <span className="page-header_heading_blurb">served from 5pm to 7pm</span>}
+      </div>
       <div className="page-header_buttons">
-        {props.title !== "HAPPY HOUR MENU" && (
+        {title !== "HAPPY HOUR MENU" && (
           <HeroButton
             to="/happy-hour"
             color="white"
@@ -17,7 +21,7 @@ const PageHeader: React.FC<IProps> = (props: IProps) => {
             className="page-header-button"
           />
         )}
-        {props.title !== "TAKE-OUT MENU" && (
+        {title !== "TAKE-OUT MENU" && (
           <HeroButton
             to="/take-out"
             color="white"
@@ -25,7 +29,7 @@ const PageHeader: React.FC<IProps> = (props: IProps) => {
             className="page-header-button"
           />
         )}
-        {props.title !== "ALL DAY MENU" && (
+        {title !== "ALL DAY MENU" && (
           <HeroButton
             to="/menu"
             color="white"
