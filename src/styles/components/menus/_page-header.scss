@@ -37,7 +37,8 @@
     }
 
     &_blurb {
-      margin-bottom: 1rem;
+      margin: 1rem;
+      font-weight: 500;
     }
   }
 
@@ -61,6 +62,12 @@
     padding-top: 10rem;
     padding-bottom: 6rem;
     min-height: unset;
+
+    &_heading {
+      &_blurb {
+        margin-top: 0;
+      }
+    }
 
     &_buttons {
       flex-direction: row;
