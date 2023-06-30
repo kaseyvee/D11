@@ -2,9 +2,6 @@ import React, { createContext, useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
-import { useFetchMenu } from "./helpers/useFetchMenu";
-import { useFetchDrinksMenu } from "./helpers/useFetchDrinksMenu";
-
 import Loading from "./components/Loading";
 import NavBar from "./components/navbar";
 import Footer from "./components/Footer";
@@ -12,7 +9,7 @@ import Footer from "./components/Footer";
 import Router from "./pages/router";
 import useFetchData from "./helpers/useFetchData";
 
-export const MenuContext = createContext({});
+export const DataContext = createContext({});
 
 const App: React.FC = () => {
   const [loading, setLoading] = useState(true);
@@ -33,13 +30,13 @@ const App: React.FC = () => {
         {loading ? (
           <Loading />
         ) : (
-          <MenuContext.Provider value={{ data }}>
+          <DataContext.Provider value={{ data }}>
             <NavBar />
 
             <Router />
 
             <Footer />
-          </MenuContext.Provider>
+          </DataContext.Provider>
         )}
       </AnimatePresence>
     </BrowserRouter>

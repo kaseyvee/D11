@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 
-import { MenuContext } from "../App";
+import { DataContext } from "../App";
 import useScrollToTop from "../helpers/useScrollToTop";
 import getMenuType from "../helpers/getMenuType";
 
@@ -17,7 +17,7 @@ const HappyHourPage: React.FC = () => {
     document.title = "Happy Hour | District Eleven";
   }, []);
 
-  const { data }: any = useContext(MenuContext);
+  const { data }: any = useContext(DataContext);
   const menu = data.menu;
   const drinks = data.drinks;
 
