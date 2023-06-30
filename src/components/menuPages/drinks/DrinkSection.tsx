@@ -1,7 +1,4 @@
-import BottleItem from "./BottleItem";
 import DrinkItem from "./DrinkItem";
-import GlassItem from "./GlassItem";
-import TapItem from "./TapItem";
 
 interface IProps {
   drinkItems: {
