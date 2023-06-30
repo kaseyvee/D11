@@ -42,7 +42,6 @@ export default function useFetchData() {
 
         setState({
           diets,
-          categories,
           menu,
           drinks,
           generalInfo,
