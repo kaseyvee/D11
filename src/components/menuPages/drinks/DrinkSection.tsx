@@ -17,10 +17,10 @@ interface IProps {
     happyHour: boolean;
     alcoholContent?: number;
   }[];
-  happyHour?: boolean;
+  menuType: string;
 }
 
-const DrinkSection: React.FC<IProps> = ({ drinkItems, happyHour }) => {
+const DrinkSection: React.FC<IProps> = ({ drinkItems, menuType }) => {
   const drinkType = drinkItems[0].type;
 
   const componentMapping: any = {
@@ -39,7 +39,7 @@ const DrinkSection: React.FC<IProps> = ({ drinkItems, happyHour }) => {
       return (
         <Component
           key={drinkItem.name}
-          happyHour={happyHour}
+          menuType={menuType}
           drinkItem={drinkItem}
         />
       );

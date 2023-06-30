@@ -13,10 +13,10 @@ interface IProps {
     happyHour: boolean;
     alcoholContent?: number;
   };
-  happyHour?: boolean;
+  menuType: string;
 }
 
-const TapItem: React.FC<IProps> = ({ drinkItem, happyHour }) => {
+const TapItem: React.FC<IProps> = ({ drinkItem, menuType }) => {
   return (
     <li className={`tap-item ${drinkItem.soldOut && `sold-out`}`}>
       <div className="tap-item_main">
@@ -32,7 +32,7 @@ const TapItem: React.FC<IProps> = ({ drinkItem, happyHour }) => {
         </div>
 
         <div className="tap-item_main_price">
-          {happyHour ? (
+          {menuType === "happyHour" ? (
             <span>{drinkItem.happyHourPrice}</span>
           ) : (
             <span>

@@ -38,9 +38,9 @@ export default function cleanUpDrinksData(drinks: any) {
     cocktails: output.cocktail,
     shooters: output.shooter,
     beerOnTap: alphabetizedTaps,
+    bottledBeer: output["bottled beer"],
     soju: output.soju,
     sake: output.sake,
-    bottledBeer: output["bottled beer"],
     nonAlcoholic: output["non-alcoholic"],
   };
 
