@@ -57,7 +57,7 @@ const DrinkItem: React.FC<IProps> = ({ drinkItem, menuType }) => {
       return (
         <>
           <span className="bottle-item_main_words_name">{drinkItem.name}</span>
-          <span> {drinkItem.size}ml</span>
+          <span className="bottle-item_main_words_size"> {drinkItem.size}ml</span>
           {drinkItem.alcoholContent && (
             <span className="bottle-item_main_words_alcohol-content">
               {" "}
