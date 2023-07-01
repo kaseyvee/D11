@@ -6,6 +6,13 @@
     &_words {
       &_name {
         font-weight: 700;
+        color: $white !important;
+        font-style: normal !important;
+        margin-right: 0.25rem !important;
+      }
+
+      &_size {
+        margin-right: 0.25rem !important;
       }
 
       &_alcohol-content {
