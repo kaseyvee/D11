@@ -17,7 +17,7 @@ interface IProps {
 }
 
 const DrinkItem: React.FC<IProps> = ({ drinkItem, menuType }) => {
-  const componentMapping: any = {
+  const drinkTypeMapping: any = {
     cocktail: "glass",
     "non-alcoholic": "glass",
     shooter: "glass",
@@ -27,23 +27,23 @@ const DrinkItem: React.FC<IProps> = ({ drinkItem, menuType }) => {
     sake: "bottle",
   };
 
-  const componentType = componentMapping[drinkItem.type];
+  const drinkType = drinkTypeMapping[drinkItem.type];
 
   const renderSharedContent = () => {
-    if (componentType === "tap") {
+    if (drinkType === "tap") {
       return (
         <>
           <span className="tap-item_main_words_brewery">
             {drinkItem.brewery}
           </span>
-          <span> {drinkItem.name}</span>
+          <span className="tap-item_main_words_name"> {drinkItem.name}</span>
           <span className="tap-item_main_words_alcohol-content">
             {" "}
             {drinkItem.alcoholContent}%
           </span>
         </>
       );
-    } else if (componentType === "glass") {
+    } else if (drinkType === "glass") {
       return (
         <>
           <header>{drinkItem.name}</header>
@@ -53,7 +53,7 @@ const DrinkItem: React.FC<IProps> = ({ drinkItem, menuType }) => {
           <p>{drinkItem.description}</p>
         </>
       );
-    } else if (componentType === "bottle") {
+    } else if (drinkType === "bottle") {
       return (
         <>
           <span className="bottle-item_main_words_name">{drinkItem.name}</span>
@@ -74,13 +74,13 @@ const DrinkItem: React.FC<IProps> = ({ drinkItem, menuType }) => {
     if (menuType === "happyHour") {
       return <span>{drinkItem.happyHourPrice}</span>;
     } else {
-      if (componentType === "tap") {
+      if (drinkType === "tap") {
         return (
           <span>
             {drinkItem.priceByGlass}/{drinkItem.priceByPitcher}
           </span>
         );
-      } else if (componentType === "glass" || componentType === "bottle") {
+      } else if (drinkType === "glass" || drinkType === "bottle") {
         return <span>{drinkItem.priceByGlass}</span>;
       }
     }
