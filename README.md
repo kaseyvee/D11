@@ -1,5 +1,7 @@
 # District Eleven Website Redesign
 
+Hello! I've begun converting this React app into a Next.js 13 app. See the most up to date version [here](https://github.com/kaseyvee/district-eleven).
+
 ## Before:
 
 ### Desktop
